@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-submit-spark-app" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/02/submit-spark-app/" class="article-date">
+  <time datetime="2017-02-02T14:28:03.453Z" itemprop="datePublished">2017-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/02/submit-spark-app/">Spark应用的调用方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="spark应用提交到spark集群"><a href="#spark应用提交到spark集群" class="headerlink" title="spark应用提交到spark集群"></a>spark应用提交到spark集群</h2><ul>
+<li>进入$SPARK_HOME，运行</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/scala-2.10/spark-cluster-test-assembly-1.0.jar</div></pre></td></tr></table></figure>
+<ul>
+<li>spark应用包的生成 </li>
+</ul>
+<p>在应用程序目录中执行包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt package</div></pre></td></tr></table></figure>
+<p>这样生成的spark包，关联包无法加载</p>
+<p>需要在应用程序目录中执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt assembly</div></pre></td></tr></table></figure>
+<p>在project中添加plugin.sbt，在项目根目录下添加assembly.sbt，在项目根目录下的build.sbt中依赖库spark的后面加上”provided”。这样，才能生成assembly的jar包。</p>
+<h2 id="远程网络服务调用spark应用，将其提交到spark集群"><a href="#远程网络服务调用spark应用，将其提交到spark集群" class="headerlink" title="远程网络服务调用spark应用，将其提交到spark集群"></a>远程网络服务调用spark应用，将其提交到spark集群</h2><ul>
+<li><p>javascript调用spark restful 接口无法完成，因为hadoop1的jetty无法进行跨域访问</p>
+</li>
+<li><p>采用java服务的方式来访问</p>
+</li>
+<li><p>远程提交spark应用中，需要在集群的节点中添加/tmp/spark-events/目录</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/02/submit-spark-app/" data-id="ciyoh8bwc000380n4mnd4aknq" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-spark_version_switch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/02/spark_version_switch/" class="article-date">
+  <time datetime="2017-02-02T14:28:03.445Z" itemprop="datePublished">2017-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/02/spark_version_switch/">Spark不同版本切换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>改变.bashrc中的sparkhome</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/02/spark_version_switch/" data-id="ciyoh8bwg000480n46ukqzgld" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-spark_on_mesos" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/02/spark_on_mesos/" class="article-date">
+  <time datetime="2017-02-02T14:28:03.440Z" itemprop="datePublished">2017-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/02/spark_on_mesos/">将Spark运行在mesos上</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>运行启动各个集群服务前，必须保证/etc/hosts中的机器名和对应ip是在每个机器上实际正确对应的！！！</p>
+<h2 id="启动mesos"><a href="#启动mesos" class="headerlink" title="启动mesos"></a>启动mesos</h2><p>进入/usr/local/mesos/sbin执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./mesos-start-cluster.sh</div></pre></td></tr></table></figure></p>
+<h2 id="启动hadoop-1"><a href="#启动hadoop-1" class="headerlink" title="启动hadoop 1"></a>启动hadoop 1</h2><p>进入/usr/local/hadoop/hadoop-1.2.1/sbin执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./start-all.sh</div></pre></td></tr></table></figure></p>
+<p>将spark二进制包上传至hdfs,进入/usr/local/spark执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hadoop fs -put spark-1.4.1-bin-hadoop1.tgz /spark-1.4.1-bin-hadoop1.tgz</div></pre></td></tr></table></figure></p>
+<h2 id="spark-on-mesos的配置与启动"><a href="#spark-on-mesos的配置与启动" class="headerlink" title="spark on mesos的配置与启动"></a>spark on mesos的配置与启动</h2><ul>
+<li>修改spark的配置文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/spark/spark-1.4.1-bin-hadoop1/conf</div><div class="line">$ sudo vi spark-env.sh</div></pre></td></tr></table></figure>
+<p>添加以下几行内容</p>
+<pre><code>#mesos
+export MESOS_NATIVE_JAVA_LIBRARY=/usr/local/lib/libmesos.so
+export SPARK_EXECUTOR_URI=hdfs://spark-1.4.0-bin-hadoop2.6.tgz
+</code></pre><p>打开配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo vi spark-defaults.conf</div></pre></td></tr></table></figure>
+<p>添加以下几行内容</p>
+<pre><code>#mesos
+spark.executor.uri hdfs://spark-1.4.1-bin-hadoop1.tgz
+spark.master mesos://Master:5050
+</code></pre><ul>
+<li><p>启动spark</p>
+<p>进入/usr/local/spark/spark-1.4.1-bin-hadoop1/sbin</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ ./start-history-server.sh</div><div class="line">$ ./start-all.sh</div><div class="line">$ ./start-mesos-dispatch.sh</div><div class="line">$ <span class="built_in">cd</span> ..</div><div class="line">$ <span class="built_in">cd</span> bin</div><div class="line">$ ./spark-shell</div></pre></td></tr></table></figure>
+<h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><p>master机器jps命令下，spark的Master未启动</p>
+<ul>
+<li>原因<br>master的logs文件中发现命令行的ip为老局域网ip，在spark工作目录的conf下的spark-env.sh文件中，修改SPARK_MASTER_IP为新局域网中的master机器ip。</li>
+</ul>
+<h3 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h3><p>在mesos之上运行spark的应用程序,出现下面问题<br>    Failed to load native Mesos library from /home/dummy/.java/jdk1.6.0_45/jre/lib/amd64/server:/home/dummy/.java/jdk1.6.0_45/jre/lib/amd64:/home/dummy/.java/jdk1.6.0_45/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib<br>    java.lang.UnsatisfiedLinkError: no mesos in java.library.path</p>
+<ul>
+<li><p>原因</p>
+<p>  spark_env.sh不会自动配置，需要运行spark_env.sh</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> spark_env.sh</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以考虑将这个执行语句放到.bashrc文件中。</p>
+<h3 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h3><p>在intelliJ Idea下运行spark应用，出现</p>
+<pre><code>New master detected at master@192.168.1.103:5050
+No credentials provided. Attempting to register without authentication
+</code></pre><ul>
+<li><p>原因</p>
+<p>   spark未运行start-mesos-dispatch.sh ?</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/02/spark_on_mesos/" data-id="ciyoh8bvy000180n4a5myu4ti" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mesos" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/02/mesos/" class="article-date">
+  <time datetime="2017-02-02T14:28:03.433Z" itemprop="datePublished">2017-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/02/mesos/">mesos的配置及部署</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><p>activated slave的数目为0</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>由于虚拟机换了局域网的环境，ip重新分配，因此/etc/hosts里面的机器名与ip地址的映射关系变化了，需要重新修改。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/02/mesos/" data-id="ciyoh8bw4000280n49izkmp2g" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/02/hexo/" class="article-date">
+  <time datetime="2017-02-02T14:28:03.427Z" itemprop="datePublished">2017-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/02/hexo/">建立自己的日志网站</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##必要软件的安装</p>
+<p>###需要安装的软件</p>
+<ul>
+<li>nodejs</li>
+<li>git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)</li>
+<li>github</li>
+</ul>
+<p>###hexo的安装<br>在nodejs的cmd下安装</p>
+<p>···bash<br>$ npm install -g hexo<br>$ npm install hexo-generator-index –save #索引生成器<br>$ npm install hexo-generator-archive –save #归档生成器<br>$ npm install hexo-generator-category –save #分类生成器<br>$ npm install hexo-generator-tag –save #标签生成器<br>$ npm install hexo-server –save #本地服务<br>$ npm install hexo-deployer-git –save #hexo通过git发布（必装）<br>$ npm install hexo-renderer-marked@0.2.7–save #渲染器<br>$ npm install hexo-renderer-stylus@0.3.0 –save #渲染器<br>···</p>
+<h2 id="本地构建hexo的博客"><a href="#本地构建hexo的博客" class="headerlink" title="本地构建hexo的博客"></a>本地构建hexo的博客</h2><p>通过nodejs的cmd下建立一个目录hexo-blog。进入该目录后<br>···bash<br>$ hexo init<br>···<br>参考<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">这里</a>，<a href="http://www.jianshu.com/p/017e01718d41" target="_blank" rel="external">这里</a>。</p>
+<h3 id="建立新页面"><a href="#建立新页面" class="headerlink" title="建立新页面"></a>建立新页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="运行本地服务"><a href="#运行本地服务" class="headerlink" title="运行本地服务"></a>运行本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>本地hexo已建立成功，测试网址：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<p>##用github发布并管理博客</p>
+<h3 id="构建repository"><a href="#构建repository" class="headerlink" title="构建repository"></a>构建repository</h3><ul>
+<li>登录github</li>
+<li>建立名为zengjay.github.io的repo</li>
+</ul>
+<h3 id="只保留hexo的源码在一台本地机器的部署方法"><a href="#只保留hexo的源码在一台本地机器的部署方法" class="headerlink" title="只保留hexo的源码在一台本地机器的部署方法"></a>只保留hexo的源码在一台本地机器的部署方法</h3><ul>
+<li><p>在本地hexo博客源码目录hexo-blog下将博客部署到远程站点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/02/hexo/" data-id="ciyoh8bvs000080n4ynx7abaw" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/02/submit-spark-app/">Spark应用的调用方法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/spark_version_switch/">Spark不同版本切换</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/spark_on_mesos/">将Spark运行在mesos上</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/mesos/">mesos的配置及部署</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/hexo/">建立自己的日志网站</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
