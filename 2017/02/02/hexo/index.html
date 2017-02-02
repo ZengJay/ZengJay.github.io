@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>建立自己的日志网站 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="必要软件的安装需要安装的软件
+nodejs
+git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)
+github
+
+hexo的安装在nodejs的cmd下安装
+···bash$ npm install -g hexo$ npm install hexo-generator-index –save #索引生成器$ npm install hexo-generator-ar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="建立自己的日志网站">
+<meta property="og:url" content="http://yoursite.com/2017/02/02/hexo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="必要软件的安装需要安装的软件
+nodejs
+git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)
+github
+
+hexo的安装在nodejs的cmd下安装
+···bash$ npm install -g hexo$ npm install hexo-generator-index –save #索引生成器$ npm install hexo-generator-ar">
+<meta property="og:updated_time" content="2017-02-02T15:00:06.726Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="建立自己的日志网站">
+<meta name="twitter:description" content="必要软件的安装需要安装的软件
+nodejs
+git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)
+github
+
+hexo的安装在nodejs的cmd下安装
+···bash$ npm install -g hexo$ npm install hexo-generator-index –save #索引生成器$ npm install hexo-generator-ar">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/02/hexo/" class="article-date">
+  <time datetime="2017-02-02T14:28:03.427Z" itemprop="datePublished">2017-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      建立自己的日志网站
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="必要软件的安装"><a href="#必要软件的安装" class="headerlink" title="必要软件的安装"></a>必要软件的安装</h2><h3 id="需要安装的软件"><a href="#需要安装的软件" class="headerlink" title="需要安装的软件"></a>需要安装的软件</h3><ul>
+<li>nodejs</li>
+<li>git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)</li>
+<li>github</li>
+</ul>
+<h3 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h3><p>在nodejs的cmd下安装</p>
+<p>···bash<br>$ npm install -g hexo<br>$ npm install hexo-generator-index –save #索引生成器<br>$ npm install hexo-generator-archive –save #归档生成器<br>$ npm install hexo-generator-category –save #分类生成器<br>$ npm install hexo-generator-tag –save #标签生成器<br>$ npm install hexo-server –save #本地服务<br>$ npm install hexo-deployer-git –save #hexo通过git发布（必装）<br>$ npm install hexo-renderer-marked@0.2.7–save #渲染器<br>$ npm install hexo-renderer-stylus@0.3.0 –save #渲染器<br>···</p>
+<h2 id="本地构建hexo的博客"><a href="#本地构建hexo的博客" class="headerlink" title="本地构建hexo的博客"></a>本地构建hexo的博客</h2><p>通过nodejs的cmd下建立一个目录hexo-blog。进入该目录后<br>···bash<br>$ hexo init<br>···<br>参考<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">这里</a>，<a href="http://www.jianshu.com/p/017e01718d41" target="_blank" rel="external">这里</a>。</p>
+<h3 id="建立新页面"><a href="#建立新页面" class="headerlink" title="建立新页面"></a>建立新页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="运行本地服务"><a href="#运行本地服务" class="headerlink" title="运行本地服务"></a>运行本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>本地hexo已建立成功，测试网址：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h2 id="用github发布并管理博客"><a href="#用github发布并管理博客" class="headerlink" title="用github发布并管理博客"></a>用github发布并管理博客</h2><h3 id="构建repository"><a href="#构建repository" class="headerlink" title="构建repository"></a>构建repository</h3><ul>
+<li>登录github</li>
+<li>建立名为zengjay.github.io的repo</li>
+</ul>
+<h3 id="只保留hexo的源码在一台本地机器的部署方法"><a href="#只保留hexo的源码在一台本地机器的部署方法" class="headerlink" title="只保留hexo的源码在一台本地机器的部署方法"></a>只保留hexo的源码在一台本地机器的部署方法</h3><ul>
+<li><p>在本地hexo博客源码目录hexo-blog下将博客部署到远程站点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p> More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+</li>
+</ul>
+<h3 id="在不同机器上对hexo的源码进行版本管理"><a href="#在不同机器上对hexo的源码进行版本管理" class="headerlink" title="在不同机器上对hexo的源码进行版本管理"></a>在不同机器上对hexo的源码进行版本管理</h3><ul>
+<li><em>在建立好博客的本地源码后，不要部署到github的zengjay.github.com上。</em></li>
+<li>在hexo-blog目录下构建git的master分支与hexo分支。master分支用来管理博客网页；hexo分支用来管理hexo的源码。</li>
+<li><p>构建git的master分支</p>
+<p>  echo “# zengjay.github.io” &gt;&gt; README.md<br>  git init<br>  git add README.md<br>  git commit -m “first commit”<br>  git remote add origin <a href="https://github.com/ZengJay/zengjay.github.io.git" target="_blank" rel="external">https://github.com/ZengJay/zengjay.github.io.git</a><br>  git push -u origin maste</p>
+</li>
+<li><p>构建git的hexo分支</p>
+<p>  git checkout -b hexo //创建并切换到hexo分支<br>  git add .<br>  git commit -m “hexo initial commit”<br>  git push -u origin hexo</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/02/hexo/" data-id="ciyoh8bvs000080n4ynx7abaw" class="article-share-link">Поделиться</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/02/mesos/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Следующий</strong>
+      <div class="article-nav-title">
+        
+          mesos的配置及部署
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Недавние записи</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/02/submit-spark-app/">Spark应用的调用方法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/spark_version_switch/">Spark不同版本切换</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/spark_on_mesos/">将Spark运行在mesos上</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/mesos/">mesos的配置及部署</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/hexo/">建立自己的日志网站</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
