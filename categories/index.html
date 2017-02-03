@@ -88,7 +88,7 @@
 <meta property="og:title" content="categories">
 <meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:updated_time" content="2017-02-03T13:05:42.382Z">
+<meta property="og:updated_time" content="2017-02-03T15:11:18.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="categories">
 
@@ -264,7 +264,14 @@
 
     
     
-      
+      <div class="category-all-page">
+        <div class="category-all-title">
+            Insgesamt 2 Kategorien
+        </div>
+        <div class="category-all">
+          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/博客撰写/">博客撰写</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/大数据计算/">大数据计算</a><span class="category-list-count">4</span></li></ul>
+        </div>
+      </div>
     
   </div>
 
@@ -318,11 +325,18 @@
           
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">Kategorien</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">Tags</span>
               </a>
             </div>
@@ -497,6 +511,43 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+	    TeX: {  // TeX/LaTeX input processor
+	      equationNumbers: { autoNumber: "AMS" },  // only number those equations in specific AMSmath environments
+	      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]  // introduce AMS extensions and suppress generating error messages 
+	    },
+	    "HTML-CSS": {  // HTML-CSS output processor (this is the default output of MathJax)
+	      scale: 110,  // The scaling factor of math with respect to the surrounding text
+	      linebreaks: { automatic: true } // automatically breaks the line if necessary
+	    },
+	    SVG: {  // SVG output processor
+	      scale: 110,  // The scaling factor of math with respect to the surrounding text
+	      linebreaks: { automatic: true } // automatically breaks the line if necessary
+	    },
+	    menuSettings: {  // settings for the mathematics contextual menu
+	      zoom: "Hover"  // set equation zooming to be triggered by a single mouse click
+	    }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
