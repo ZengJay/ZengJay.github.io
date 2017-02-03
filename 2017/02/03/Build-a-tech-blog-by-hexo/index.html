@@ -10,8 +10,10 @@ nodejs
 git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)
 github
 
-hexo的安装在nodejs的cmd下安装
-···bash$ npm install -g hexo$ npm install hexo-generator-index –save #索引生成器$ npm install hexo-generator-ar">
+github的密匙配置确认windows下的当前用户名的目录下没有.ssh目录
+生成SSH Key1ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+提示会让输入保存密匙的文件名(含路径)。
+生成SSH KEY的时">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用hexo构建自己的博客">
 <meta property="og:url" content="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/index.html">
@@ -21,9 +23,12 @@ nodejs
 git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)
 github
 
-hexo的安装在nodejs的cmd下安装
-···bash$ npm install -g hexo$ npm install hexo-generator-index –save #索引生成器$ npm install hexo-generator-ar">
-<meta property="og:updated_time" content="2017-02-03T03:40:57.633Z">
+github的密匙配置确认windows下的当前用户名的目录下没有.ssh目录
+生成SSH Key1ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+提示会让输入保存密匙的文件名(含路径)。
+生成SSH KEY的时">
+<meta property="og:image" content="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/public-key-access-right.jpg">
+<meta property="og:updated_time" content="2017-02-03T07:57:53.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo构建自己的博客">
 <meta name="twitter:description" content="必要软件的安装需要安装的软件
@@ -31,8 +36,11 @@ nodejs
 git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)
 github
 
-hexo的安装在nodejs的cmd下安装
-···bash$ npm install -g hexo$ npm install hexo-generator-index –save #索引生成器$ npm install hexo-generator-ar">
+github的密匙配置确认windows下的当前用户名的目录下没有.ssh目录
+生成SSH Key1ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+提示会让输入保存密匙的文件名(含路径)。
+生成SSH KEY的时">
+<meta name="twitter:image" content="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/public-key-access-right.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Jay&#39;s Tech Blog" type="application/atom+xml">
   
@@ -70,9 +78,9 @@ hexo的安装在nodejs的cmd下安装
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -108,9 +116,28 @@ hexo的安装在nodejs的cmd下安装
 <li>git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)</li>
 <li>github</li>
 </ul>
+<h3 id="github的密匙配置"><a href="#github的密匙配置" class="headerlink" title="github的密匙配置"></a>github的密匙配置</h3><p>确认windows下的当前用户名的目录下没有.ssh目录</p>
+<h3 id="生成ssh-key"><a href="#生成SSH-Key" class="headerlink" title="生成SSH Key"></a>生成SSH Key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></div></pre></td></tr></table></figure>
+<p>提示会让输入保存密匙的文件名(含路径)。</p>
+<p>生成SSH KEY的时候还要求输入私钥密码”│Enter passphrase (empty for no passphrase):”。如果输入一定请记住私钥的密码， 下面导入私钥的时候要用到；如果不输入的话，直接回车即可。</p>
+<p>将SSH 私钥增加到ssh-agent:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add ~/.ssh/xyz_rsa</div></pre></td></tr></table></figure>
+<p>这里会提示输入一次私钥的密码，查看已经add的SSH KEY：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add <span class="_">-l</span>；</div></pre></td></tr></table></figure></p>
+<h3 id="github添加密匙"><a href="#github添加密匙" class="headerlink" title="github添加密匙"></a>github添加密匙</h3><p>浏览器登录自己的github页面, 进入”Account Settings”, 再点击左边的”SSH Key”可以看到自己上传过的SSH公钥列表. 再点击”Add SSH Key”新增一个公钥, 直接将上面步骤中生成的密匙粘贴即可；</p>
+<h3 id="测试是否能联通github"><a href="#测试是否能联通github" class="headerlink" title="测试是否能联通github"></a>测试是否能联通github</h3><p>测试SSH Key登录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p>如果有问题可以通过命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -v git@github.com</div></pre></td></tr></table></figure></p>
+<p>来查看问题信息</p>
 <h3 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h3><p>在nodejs的cmd下安装</p>
-<p>···bash<br>$ npm install -g hexo<br>$ npm install hexo-generator-index –save #索引生成器<br>$ npm install hexo-generator-archive –save #归档生成器<br>$ npm install hexo-generator-category –save #分类生成器<br>$ npm install hexo-generator-tag –save #标签生成器<br>$ npm install hexo-server –save #本地服务<br>$ npm install hexo-deployer-git –save #hexo通过git发布（必装）<br>$ npm install hexo-renderer-marked@0.2.7–save #渲染器<br>$ npm install hexo-renderer-stylus@0.3.0 –save #渲染器<br>···</p>
-<h2 id="本地构建hexo的博客"><a href="#本地构建hexo的博客" class="headerlink" title="本地构建hexo的博客"></a>本地构建hexo的博客</h2><p>通过nodejs的cmd下建立一个目录hexo-blog。进入该目录后<br>···bash<br>$ hexo init<br>···<br>参考<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">这里</a>，<a href="http://www.jianshu.com/p/017e01718d41" target="_blank" rel="external">这里</a>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div><div class="line">$ npm install hexo-generator-index --save <span class="comment">#索引生成器</span></div><div class="line">$ npm install hexo-generator-archive --save <span class="comment">#归档生成器</span></div><div class="line">$ npm install hexo-generator-category --save <span class="comment">#分类生成器</span></div><div class="line">$ npm install hexo-generator-tag --save <span class="comment">#标签生成器</span></div><div class="line">$ npm install hexo-server --save <span class="comment">#本地服务</span></div><div class="line">$ npm install hexo-deployer-git --save <span class="comment">#hexo通过git发布（必装）</span></div><div class="line">$ npm install hexo-renderer-marked@0.2.7--save <span class="comment">#渲染器</span></div><div class="line">$ npm install hexo-renderer-stylus@0.3.0 --save <span class="comment">#渲染器</span></div></pre></td></tr></table></figure>
+<h3 id="软件使用"><a href="#软件使用" class="headerlink" title="软件使用"></a>软件使用</h3><ul>
+<li><p>git命令用github的shell，进入blog的源码目录来输入</p>
+</li>
+<li><p>hexo命令用nodejs的cmd，进入blog的源码目录来输入</p>
+</li>
+</ul>
+<h2 id="本地构建hexo的博客"><a href="#本地构建hexo的博客" class="headerlink" title="本地构建hexo的博客"></a>本地构建hexo的博客</h2><p>通过nodejs的cmd下建立一个目录hexo-blog。进入该目录后</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
+<p>参考<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">这里</a>，<a href="http://www.jianshu.com/p/017e01718d41" target="_blank" rel="external">这里</a>。</p>
 <h3 id="建立新页面"><a href="#建立新页面" class="headerlink" title="建立新页面"></a>建立新页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
@@ -150,20 +177,37 @@ branch: master
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
 <ul>
-<li>新机器的管理</li>
+<li>更新hexo源码后，提交到github</li>
 </ul>
-<h2 id="常见问题及解决方法"><a href="#常见问题及解决方法" class="headerlink" title="常见问题及解决方法"></a>常见问题及解决方法</h2><h3 id="github的ssh公匙问题"><a href="#github的ssh公匙问题" class="headerlink" title="github的ssh公匙问题"></a>github的ssh公匙问题</h3><ol>
-<li>无法认证</li>
-</ol>
-<ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">"更新内容"</span></div><div class="line">git push -u origin hexo</div></pre></td></tr></table></figure>
+<ul>
+<li>新机器的hexo源码部署</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> -b hexo https://github.com/username/username.git</div></pre></td></tr></table></figure>
+<p>参考<a href="https://sawyersun.github.io/2017/01/20/Using-git-branch-manage-hexo-blog/" target="_blank" rel="external">here</a>，<a href="http://www.jianshu.com/p/6fb0b287f950" target="_blank" rel="external">here</a></p>
+<ul>
+<li>版本控制和持续集成</li>
+</ul>
+<p>参考<a href="https://formulahendry.github.io/2016/12/04/hexo-ci/#more" target="_blank" rel="external">here</a></p>
+<h2 id="常见问题及解决方法"><a href="#常见问题及解决方法" class="headerlink" title="常见问题及解决方法"></a>常见问题及解决方法</h2><h3 id="github的ssh公匙问题"><a href="#github的ssh公匙问题" class="headerlink" title="github的ssh公匙问题"></a>github的ssh公匙问题</h3><ul>
+<li>无法认证github的密匙</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">	ssh -T git@github.com</div><div class="line">```	</div><div class="line"></div><div class="line">出现如下问题</div><div class="line"></div><div class="line">```bash</div><div class="line">	Warning: Permanently added <span class="string">"github.com,*.*.*.*"</span>(RSA) to the list of known hosts.</div><div class="line">	Permission denied(public key).</div></pre></td></tr></table></figure>
+<p>原因：</p>
+<p>安装了github for windows，其ssh配置文件中认证文件为~.ssh\github_rsa，ssh-keygen生成的不是此文件，因此，可以重装github，并把github_rsa文件的密匙添加到github网站个人信息中即可。</p>
+<p>详细请参考<a href="http://www.cnblogs.com/zjrodger/p/3952692.html" target="_blank" rel="external">网站</a></p>
+<ul>
 <li>无法联通github</li>
-</ol>
-<p>安装低版本（1.9）的git，可以到<a href="https://github.com/msysgit/msysgit/releases/tag/Git-1.9.5-preview20141217" target="_blank" rel="external">这里</a>下载。</p>
+</ul>
+<p>出现如下问题<br>    Permission denied (publickey). fatal: Could not read from remote repository.<br>    Please make sure you have the correct access rights and the repository exists.</p>
+<p>如图所示：<br><img src="/2017/02/03/Build-a-tech-blog-by-hexo/public-key-access-right.jpg" alt=""></p>
+<p>卸载git高版本，然后安装低版本（1.9）的git，可以到<a href="https://github.com/msysgit/msysgit/releases/tag/Git-1.9.5-preview20141217" target="_blank" rel="external">这里</a>下载。</p>
+<p>参考<a href="https://github.com/hexojs/hexo/issues/1495" target="_blank" rel="external">网站1</a>,<a href="http://lijialalala.github.io/2016/04/05/hexoxo-usage/" target="_blank" rel="external">网站2</a>,<a href="http://www.cognize.me/2015/08/22/msysgiterror/" target="_blank" rel="external">网站3</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/" data-id="ciypa9cfm0000mwn4l339te35" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/" data-id="ciypgsqow0000f4n4375kkvpe" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -175,7 +219,7 @@ branch: master
 <nav id="article-nav">
   
     <a href="/2017/02/03/Hexo高级功能/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           Hexo高级功能
@@ -184,9 +228,9 @@ branch: master
     </a>
   
   
-    <a href="/2017/02/03/hexo-adv/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">hexo的高级功能</div>
+    <a href="/2017/02/02/submit-spark-app/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Spark应用的调用方法</div>
     </a>
   
 </nav>
@@ -203,7 +247,7 @@ branch: master
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
     </div>
@@ -213,7 +257,7 @@ branch: master
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
     </div>
@@ -232,7 +276,7 @@ branch: master
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -245,15 +289,15 @@ branch: master
           </li>
         
           <li>
-            <a href="/2017/02/03/hexo-adv/">hexo的高级功能</a>
-          </li>
-        
-          <li>
             <a href="/2017/02/02/submit-spark-app/">Spark应用的调用方法</a>
           </li>
         
           <li>
             <a href="/2017/02/02/spark_version_switch/">Spark不同版本切换</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/spark_on_mesos/">将Spark运行在mesos上</a>
           </li>
         
       </ul>
@@ -269,7 +313,7 @@ branch: master
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Zeng Jay<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
