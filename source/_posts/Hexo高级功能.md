@@ -1,7 +1,7 @@
 ---
 title: Hexo高级功能
 date: 2017-02-03 11:51:32
-tags:
+tags: hexo
 ---
 # 添加文档类别及标签
 

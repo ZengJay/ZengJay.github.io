@@ -1,558 +1,1243 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title>Jay&#39;s Tech Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
 <meta property="og:title" content="Jay's Tech Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jay's Tech Blog">
-  
-    <link rel="alternate" href="/atom.xml" title="Jay&#39;s Tech Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
 
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title> Jay's Tech Blog </title>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Jay&#39;s Tech Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jay's Tech Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
   
-    <article id="post-Hexo高级功能" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/03/Hexo高级功能/" class="article-date">
-  <time datetime="2017-02-03T03:51:32.000Z" itemprop="datePublished">2017-02-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+
+  
+    <ul id="menu" class="menu">
+      
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/03/Hexo高级功能/">Hexo高级功能</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
       
-        <h1 id="添加文档类别及标签"><a href="#添加文档类别及标签" class="headerlink" title="添加文档类别及标签"></a>添加文档类别及标签</h1><h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>首先，在 _config.yml 中设置<br>    post_asset_folder: true<br>注意：该选项一般在默认的_config.yml中有，如图<br><img src="/2017/02/03/Hexo高级功能/hexo-image-config.jpg" alt=""></p>
-<h2 id="md文件中添加"><a href="#md文件中添加" class="headerlink" title="md文件中添加"></a>md文件中添加</h2><p>使用hexo-asset-image插件插入图片</p>
-<p>首先,确认 _config.yml 中有 post_asset_folder:true 。</p>
-<p>其次，在 hexo-blog 目录，执行</p>
-<pre><code>npm install hexo-asset-image --save
-</code></pre><p>假设在</p>
-<pre><code>Hexo高级功能
-├── hexo-image-config.jpg
-└──
-Hexo高级功能.md
-</code></pre><p>这样的目录结构（目录名和文章名一致）中，只要使用<code>![](/hexo-image-config.jpg)</code> 就可以插入图片。</p>
-<p>参考<a href="http://supermaryy.com/2016/07/02/" target="_blank" rel="external">here</a></p>
-<h1 id="添加latex数学公式"><a href="#添加latex数学公式" class="headerlink" title="添加latex数学公式"></a>添加latex数学公式</h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/03/Hexo高级功能/" data-id="ciypjbsk200030wn4aqptg5z2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Build-a-tech-blog-by-hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/03/Build-a-tech-blog-by-hexo/" class="article-date">
-  <time datetime="2017-02-03T03:39:02.000Z" itemprop="datePublished">2017-02-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/03/Build-a-tech-blog-by-hexo/">用hexo构建自己的博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
       
-        <h2 id="必要软件的安装"><a href="#必要软件的安装" class="headerlink" title="必要软件的安装"></a>必要软件的安装</h2><h3 id="需要安装的软件"><a href="#需要安装的软件" class="headerlink" title="需要安装的软件"></a>需要安装的软件</h3><ul>
-<li>nodejs</li>
-<li>git(如果打算把整个hexo的源码都用github来管理的话，最好用1.9版本)</li>
-<li>github</li>
-</ul>
-<h3 id="github的密匙配置"><a href="#github的密匙配置" class="headerlink" title="github的密匙配置"></a>github的密匙配置</h3><p>确认windows下的当前用户名的目录下没有.ssh目录</p>
-<h3 id="生成ssh-key"><a href="#生成SSH-Key" class="headerlink" title="生成SSH Key"></a>生成SSH Key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></div></pre></td></tr></table></figure>
-<p>提示会让输入保存密匙的文件名(含路径)。</p>
-<p>生成SSH KEY的时候还要求输入私钥密码”│Enter passphrase (empty for no passphrase):”。如果输入一定请记住私钥的密码， 下面导入私钥的时候要用到；如果不输入的话，直接回车即可。</p>
-<p>将SSH 私钥增加到ssh-agent:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add ~/.ssh/xyz_rsa</div></pre></td></tr></table></figure>
-<p>这里会提示输入一次私钥的密码，查看已经add的SSH KEY：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add <span class="_">-l</span>；</div></pre></td></tr></table></figure></p>
-<h3 id="github添加密匙"><a href="#github添加密匙" class="headerlink" title="github添加密匙"></a>github添加密匙</h3><p>浏览器登录自己的github页面, 进入”Account Settings”, 再点击左边的”SSH Key”可以看到自己上传过的SSH公钥列表. 再点击”Add SSH Key”新增一个公钥, 直接将上面步骤中生成的密匙粘贴即可；</p>
-<h3 id="测试是否能联通github"><a href="#测试是否能联通github" class="headerlink" title="测试是否能联通github"></a>测试是否能联通github</h3><p>测试SSH Key登录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
-<p>如果有问题可以通过命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -v git@github.com</div></pre></td></tr></table></figure></p>
-<p>来查看问题信息</p>
-<h3 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h3><p>在nodejs的cmd下安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div><div class="line">$ npm install hexo-generator-index --save <span class="comment">#索引生成器</span></div><div class="line">$ npm install hexo-generator-archive --save <span class="comment">#归档生成器</span></div><div class="line">$ npm install hexo-generator-category --save <span class="comment">#分类生成器</span></div><div class="line">$ npm install hexo-generator-tag --save <span class="comment">#标签生成器</span></div><div class="line">$ npm install hexo-server --save <span class="comment">#本地服务</span></div><div class="line">$ npm install hexo-deployer-git --save <span class="comment">#hexo通过git发布（必装）</span></div><div class="line">$ npm install hexo-renderer-marked@0.2.7--save <span class="comment">#渲染器</span></div><div class="line">$ npm install hexo-renderer-stylus@0.3.0 --save <span class="comment">#渲染器</span></div></pre></td></tr></table></figure>
-<h3 id="软件使用"><a href="#软件使用" class="headerlink" title="软件使用"></a>软件使用</h3><ul>
-<li><p>git命令用github的shell，进入blog的源码目录来输入</p>
-</li>
-<li><p>hexo命令用nodejs的cmd，进入blog的源码目录来输入</p>
-</li>
-</ul>
-<h2 id="本地构建hexo的博客"><a href="#本地构建hexo的博客" class="headerlink" title="本地构建hexo的博客"></a>本地构建hexo的博客</h2><p>通过nodejs的cmd下建立一个目录hexo-blog。进入该目录后</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
-<p>参考<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">这里</a>，<a href="http://www.jianshu.com/p/017e01718d41" target="_blank" rel="external">这里</a>。</p>
-<h3 id="建立新页面"><a href="#建立新页面" class="headerlink" title="建立新页面"></a>建立新页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="运行本地服务"><a href="#运行本地服务" class="headerlink" title="运行本地服务"></a>运行本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>本地hexo已建立成功，测试网址：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h2 id="用github发布并管理博客"><a href="#用github发布并管理博客" class="headerlink" title="用github发布并管理博客"></a>用github发布并管理博客</h2><h3 id="构建repository"><a href="#构建repository" class="headerlink" title="构建repository"></a>构建repository</h3><ul>
-<li>登录github</li>
-<li>建立名为zengjay.github.io的repo<h3 id="本地部署配置"><a href="#本地部署配置" class="headerlink" title="本地部署配置"></a>本地部署配置</h3></li>
-<li><p>保证hexo-blog目录下的_config.yml文件deploy有如下格式：</p>
-<p>  deploy:</p>
-<pre><code>type: git
-repo: git@github.com:ZengJay/ZengJay.github.io.git
-branch: master
-</code></pre></li>
-</ul>
-<p><strong><a href="">注意：</a></strong><br><a href="#"><strong>type、repo、branch的冒号后面必须有空格</strong></a>,如果type后没空格，运行hexo d不会有反应。</p>
-<h3 id="只保留hexo的源码在一台本地机器的部署方法"><a href="#只保留hexo的源码在一台本地机器的部署方法" class="headerlink" title="只保留hexo的源码在一台本地机器的部署方法"></a>只保留hexo的源码在一台本地机器的部署方法</h3><ul>
-<li><p>在本地hexo博客源码目录hexo-blog下将博客部署到远程站点</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p> More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-</li>
-</ul>
-<h3 id="在不同机器上对hexo的源码进行版本管理"><a href="#在不同机器上对hexo的源码进行版本管理" class="headerlink" title="在不同机器上对hexo的源码进行版本管理"></a>在不同机器上对hexo的源码进行版本管理</h3><ul>
-<li><a href=""><strong>在建立好博客的本地源码后，不要部署到github的zengjay.github.com上。</strong></a></li>
-<li>在hexo-blog目录下构建git的master分支与hexo分支。master分支用来管理博客网页；hexo分支用来管理hexo的源码。</li>
-<li>构建git的master分支</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"# zengjay.github.io"</span> &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m <span class="string">"first commit"</span></div><div class="line">git remote add origin https://github.com/ZengJay/zengjay.github.io.git</div><div class="line">git push -u origin maste</div></pre></td></tr></table></figure>
-<ul>
-<li>构建git的hexo分支</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git checkout -b hexo //创建并切换到hexo分支</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"hexo initial commit"</span></div><div class="line">git push -u origin hexo</div></pre></td></tr></table></figure>
-<ul>
-<li>hexo部署</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
-<ul>
-<li>更新hexo源码后，提交到github</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">"更新内容"</span></div><div class="line">git push -u origin hexo</div></pre></td></tr></table></figure>
-<ul>
-<li>新机器的hexo源码部署</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> -b hexo https://github.com/username/username.git</div></pre></td></tr></table></figure>
-<p>参考<a href="https://sawyersun.github.io/2017/01/20/Using-git-branch-manage-hexo-blog/" target="_blank" rel="external">here</a>，<a href="http://www.jianshu.com/p/6fb0b287f950" target="_blank" rel="external">here</a></p>
-<ul>
-<li>版本控制和持续集成</li>
-</ul>
-<p>参考<a href="https://formulahendry.github.io/2016/12/04/hexo-ci/#more" target="_blank" rel="external">here</a></p>
-<h2 id="常见问题及解决方法"><a href="#常见问题及解决方法" class="headerlink" title="常见问题及解决方法"></a>常见问题及解决方法</h2><h3 id="github的ssh公匙问题"><a href="#github的ssh公匙问题" class="headerlink" title="github的ssh公匙问题"></a>github的ssh公匙问题</h3><ul>
-<li><p>无法认证github的密匙</p>
-<p>  ssh -T git@github.com</p>
-</li>
-</ul>
-<p>出现如下问题</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Warning: Permanently added <span class="string">"github.com,*.*.*.*"</span>(RSA) to the list of known hosts.</div><div class="line">Permission denied(public key).</div></pre></td></tr></table></figure>
-<p>原因：</p>
-<p>安装了github for windows，其ssh配置文件中认证文件为~.ssh\github_rsa，ssh-keygen生成的不是此文件，因此，可以重装github，并把github_rsa文件的密匙添加到github网站个人信息中即可。</p>
-<p>详细请参考<a href="http://www.cnblogs.com/zjrodger/p/3952692.html" target="_blank" rel="external">网站</a></p>
-<ul>
-<li>无法联通github</li>
-</ul>
-<p>出现如下问题<br>    Permission denied (publickey). fatal: Could not read from remote repository.<br>    Please make sure you have the correct access rights and the repository exists.</p>
-<p>如图所示：<br><img src="/2017/02/03/Build-a-tech-blog-by-hexo/public-key-access-right.jpg" alt=""></p>
-<p>卸载git高版本，然后安装低版本（1.9）的git，可以到<a href="https://github.com/msysgit/msysgit/releases/tag/Git-1.9.5-preview20141217" target="_blank" rel="external">这里</a>下载。</p>
-<p>参考<a href="https://github.com/hexojs/hexo/issues/1495" target="_blank" rel="external">网站1</a>,<a href="http://lijialalala.github.io/2016/04/05/hexoxo-usage/" target="_blank" rel="external">网站2</a>,<a href="http://www.cognize.me/2015/08/22/msysgiterror/" target="_blank" rel="external">网站3</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/" data-id="ciypjbsjd00000wn4id26icp1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-submit-spark-app" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/02/submit-spark-app/" class="article-date">
-  <time datetime="2017-02-02T14:28:03.453Z" itemprop="datePublished">2017-02-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/submit-spark-app/">Spark应用的调用方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
       
-        <h2 id="spark应用提交到spark集群"><a href="#spark应用提交到spark集群" class="headerlink" title="spark应用提交到spark集群"></a>spark应用提交到spark集群</h2><ul>
-<li>进入$SPARK_HOME，运行</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/scala-2.10/spark-cluster-test-assembly-1.0.jar</div></pre></td></tr></table></figure>
-<ul>
-<li>spark应用包的生成 </li>
-</ul>
-<p>在应用程序目录中执行包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt package</div></pre></td></tr></table></figure>
-<p>这样生成的spark包，关联包无法加载</p>
-<p>需要在应用程序目录中执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt assembly</div></pre></td></tr></table></figure>
-<p>在project中添加plugin.sbt，在项目根目录下添加assembly.sbt，在项目根目录下的build.sbt中依赖库spark的后面加上”provided”。这样，才能生成assembly的jar包。</p>
-<h2 id="远程网络服务调用spark应用将其提交到spark集群"><a href="#远程网络服务调用spark应用，将其提交到spark集群" class="headerlink" title="远程网络服务调用spark应用，将其提交到spark集群"></a>远程网络服务调用spark应用，将其提交到spark集群</h2><ul>
-<li><p>javascript调用spark restful 接口无法完成，因为hadoop1的jetty无法进行跨域访问</p>
-</li>
-<li><p>采用java服务的方式来访问</p>
-</li>
-<li><p>远程提交spark应用中，需要在集群的节点中添加/tmp/spark-events/目录</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/02/submit-spark-app/" data-id="ciypjbslp00070wn4l8j4m6g4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-spark_version_switch" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/02/spark_version_switch/" class="article-date">
-  <time datetime="2017-02-02T14:28:03.445Z" itemprop="datePublished">2017-02-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/spark_version_switch/">Spark不同版本切换</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
       
-        <p>改变.bashrc中的sparkhome</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/02/spark_version_switch/" data-id="ciypjbslj00060wn43v0ylmoq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-spark_on_mesos" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/02/spark_on_mesos/" class="article-date">
-  <time datetime="2017-02-02T14:28:03.440Z" itemprop="datePublished">2017-02-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/spark_on_mesos/">将Spark运行在mesos上</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            Sitemap
+          </a>
+        </li>
       
-        <p>运行启动各个集群服务前，必须保证/etc/hosts中的机器名和对应ip是在每个机器上实际正确对应的！！！</p>
-<h2 id="启动mesos"><a href="#启动mesos" class="headerlink" title="启动mesos"></a>启动mesos</h2><p>进入/usr/local/mesos/sbin执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./mesos-start-cluster.sh</div></pre></td></tr></table></figure></p>
-<h2 id="启动hadoop-1"><a href="#启动hadoop-1" class="headerlink" title="启动hadoop 1"></a>启动hadoop 1</h2><p>进入/usr/local/hadoop/hadoop-1.2.1/sbin执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./start-all.sh</div></pre></td></tr></table></figure></p>
-<p>将spark二进制包上传至hdfs,进入/usr/local/spark执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hadoop fs -put spark-1.4.1-bin-hadoop1.tgz /spark-1.4.1-bin-hadoop1.tgz</div></pre></td></tr></table></figure></p>
-<h2 id="spark-on-mesos的配置与启动"><a href="#spark-on-mesos的配置与启动" class="headerlink" title="spark on mesos的配置与启动"></a>spark on mesos的配置与启动</h2><ul>
-<li>修改spark的配置文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/spark/spark-1.4.1-bin-hadoop1/conf</div><div class="line">$ sudo vi spark-env.sh</div></pre></td></tr></table></figure>
-<p>添加以下几行内容</p>
-<pre><code>#mesos
-export MESOS_NATIVE_JAVA_LIBRARY=/usr/local/lib/libmesos.so
-export SPARK_EXECUTOR_URI=hdfs://spark-1.4.0-bin-hadoop2.6.tgz
-</code></pre><p>打开配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo vi spark-defaults.conf</div></pre></td></tr></table></figure>
-<p>添加以下几行内容</p>
-<pre><code>#mesos
-spark.executor.uri hdfs://spark-1.4.1-bin-hadoop1.tgz
-spark.master mesos://Master:5050
-</code></pre><ul>
-<li><p>启动spark</p>
-<p>进入/usr/local/spark/spark-1.4.1-bin-hadoop1/sbin</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ ./start-history-server.sh</div><div class="line">$ ./start-all.sh</div><div class="line">$ ./start-mesos-dispatch.sh</div><div class="line">$ <span class="built_in">cd</span> ..</div><div class="line">$ <span class="built_in">cd</span> bin</div><div class="line">$ ./spark-shell</div></pre></td></tr></table></figure>
-<h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><p>master机器jps命令下，spark的Master未启动</p>
-<ul>
-<li>原因<br>master的logs文件中发现命令行的ip为老局域网ip，在spark工作目录的conf下的spark-env.sh文件中，修改SPARK_MASTER_IP为新局域网中的master机器ip。</li>
-</ul>
-<h3 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h3><p>在mesos之上运行spark的应用程序,出现下面问题<br>    Failed to load native Mesos library from /home/dummy/.java/jdk1.6.0_45/jre/lib/amd64/server:/home/dummy/.java/jdk1.6.0_45/jre/lib/amd64:/home/dummy/.java/jdk1.6.0_45/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib<br>    java.lang.UnsatisfiedLinkError: no mesos in java.library.path</p>
-<ul>
-<li><p>原因</p>
-<p>  spark_env.sh不会自动配置，需要运行spark_env.sh</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> spark_env.sh</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>可以考虑将这个执行语句放到.bashrc文件中。</p>
-<h3 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h3><p>在intelliJ Idea下运行spark应用，出现</p>
-<pre><code>New master detected at master@192.168.1.103:5050
-No credentials provided. Attempting to register without authentication
-</code></pre><ul>
-<li><p>原因</p>
-<p>   spark未运行start-mesos-dispatch.sh ?</p>
-</li>
-</ul>
 
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/02/spark_on_mesos/" data-id="ciypjbskp00040wn4ge7n2y5s" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mesos" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/02/mesos/" class="article-date">
-  <time datetime="2017-02-02T14:28:03.433Z" itemprop="datePublished">2017-02-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/mesos/">mesos的配置及部署</a>
-    </h1>
+    </ul>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><p>activated slave的数目为0</p>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>由于虚拟机换了局域网的环境，ip重新分配，因此/etc/hosts里面的机器名与ip地址的映射关系变化了，需要重新修改。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/02/mesos/" data-id="ciypjbsjn00010wn4cy551yum" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/02/03/Hexo高级功能/">Hexo高级功能</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/03/Build-a-tech-blog-by-hexo/">用hexo构建自己的博客</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/02/submit-spark-app/">Spark应用的调用方法</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/02/spark_version_switch/">Spark不同版本切换</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/02/spark_on_mesos/">将Spark运行在mesos上</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Zeng Jay<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/03/Hexo高级功能/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zeng Jay">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jay's Tech Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Jay's Tech Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/03/Hexo高级功能/" itemprop="url">
+                  Hexo高级功能
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T11:51:32+08:00">
+                2017-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          添加文档类别及标签添加图片配置首先，在 _config.yml 中设置    post_asset_
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/03/Hexo高级功能/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
 
-<script src="/js/script.js"></script>
+    
+      
 
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zeng Jay">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jay's Tech Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Jay's Tech Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/03/Build-a-tech-blog-by-hexo/" itemprop="url">
+                  用hexo构建自己的博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T11:39:02+08:00">
+                2017-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          必要软件的安装需要安装的软件
+nodejs
+git(如果打算把整个hexo的源码都用github来管
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/03/Build-a-tech-blog-by-hexo/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/02/submit-spark-app/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zeng Jay">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jay's Tech Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Jay's Tech Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/02/submit-spark-app/" itemprop="url">
+                  Spark应用的调用方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-02T22:28:03+08:00">
+                2017-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          spark应用提交到spark集群
+进入$SPARK_HOME，运行
+
+1bin/spark-sub
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/02/submit-spark-app/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/02/spark_version_switch/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zeng Jay">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jay's Tech Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Jay's Tech Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/02/spark_version_switch/" itemprop="url">
+                  Spark不同版本切换
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-02T22:28:03+08:00">
+                2017-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          改变.bashrc中的sparkhome
+
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/02/spark_version_switch/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/02/spark_on_mesos/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zeng Jay">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jay's Tech Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Jay's Tech Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/02/spark_on_mesos/" itemprop="url">
+                  将Spark运行在mesos上
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-02T22:28:03+08:00">
+                2017-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          运行启动各个集群服务前，必须保证/etc/hosts中的机器名和对应ip是在每个机器上实际正确对应的
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/02/spark_on_mesos/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/02/mesos/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Zeng Jay">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jay's Tech Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Jay's Tech Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/02/mesos/" itemprop="url">
+                  mesos的配置及部署
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-02T22:28:03+08:00">
+                2017-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          问题1activated slave的数目为0
+解决由于虚拟机换了局域网的环境，ip重新分配，因此/
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/02/mesos/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+          
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
   </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Zeng Jay" />
+          <p class="site-author-name" itemprop="name">Zeng Jay</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zeng Jay</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
 </body>
 </html>

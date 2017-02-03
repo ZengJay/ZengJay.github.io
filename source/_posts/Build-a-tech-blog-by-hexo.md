@@ -172,9 +172,24 @@ More info: [Server](https://hexo.io/docs/server.html)
 
 + 新机器的hexo源码部署
 
+首先，将hexo源码clone到新机器某目录下
+
 ```bash
 	git clone -b hexo https://github.com/username/username.git [新机器hexo源码目录]
 ```
+
+然后，在source目录下更改博客内容md文件。
+
+完成后可以用hexo g生成博客网页，hexo d部署博客网页。并通过下面git操作将源文件提交到github。
+
+    // 添加源文件
+    git add .
+    // git提交
+    git commit -m ""
+    // 先拉原来Github分支上的源文件到本地，进行合并
+    git pull origin hexo
+    // 比较解决前后版本冲突后，push源文件到Github的分支
+    git push origin hexo
 
 
 参考[here](https://sawyersun.github.io/2017/01/20/Using-git-branch-manage-hexo-blog/)，[here](http://www.jianshu.com/p/6fb0b287f950)
