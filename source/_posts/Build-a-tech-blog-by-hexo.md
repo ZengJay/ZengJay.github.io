@@ -173,7 +173,7 @@ More info: [Server](https://hexo.io/docs/server.html)
 + 新机器的hexo源码部署
 
 ```bash
-	git clone -b hexo https://github.com/username/username.git
+	git clone -b hexo https://github.com/username/username.git [新机器hexo源码目录]
 ```
 
 
