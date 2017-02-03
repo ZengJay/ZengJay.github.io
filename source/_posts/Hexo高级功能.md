@@ -3,6 +3,10 @@ title: Hexo高级功能
 date: 2017-02-03 11:51:32
 tags: hexo
 ---
+# Next主题设置
+
+参考[站点1](http://www.jeyzhang.com/next-theme-personal-settings.html)，[站点2](http://zhiho.github.io/2015/09/29/hexo-next/)
+
 # 添加文档类别及标签
 
 # 添加图片
