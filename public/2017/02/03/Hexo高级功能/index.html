@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo高级功能 | Jay&#39;s Tech Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="添加文档类别及标签添加图片配置首先，在 _config.yml 中设置    post_asset_folder: true注意：该选项一般在默认的_config.yml中有，如图
+md文件中添加使用hexo-asset-image插件插入图片
+首先,确认 _config.yml 中有 post_asset_folder:true 。
+其次，在 hexo-blog 目录，执行
+npm instal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo高级功能">
+<meta property="og:url" content="http://yoursite.com/2017/02/03/Hexo高级功能/index.html">
+<meta property="og:site_name" content="Jay's Tech Blog">
+<meta property="og:description" content="添加文档类别及标签添加图片配置首先，在 _config.yml 中设置    post_asset_folder: true注意：该选项一般在默认的_config.yml中有，如图
+md文件中添加使用hexo-asset-image插件插入图片
+首先,确认 _config.yml 中有 post_asset_folder:true 。
+其次，在 hexo-blog 目录，执行
+npm instal">
+<meta property="og:image" content="http://yoursite.com/2017/02/03/Hexo高级功能/hexo-image-config.jpg">
+<meta property="og:updated_time" content="2017-02-03T04:18:43.295Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo高级功能">
+<meta name="twitter:description" content="添加文档类别及标签添加图片配置首先，在 _config.yml 中设置    post_asset_folder: true注意：该选项一般在默认的_config.yml中有，如图
+md文件中添加使用hexo-asset-image插件插入图片
+首先,确认 _config.yml 中有 post_asset_folder:true 。
+其次，在 hexo-blog 目录，执行
+npm instal">
+<meta name="twitter:image" content="http://yoursite.com/2017/02/03/Hexo高级功能/hexo-image-config.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Jay&#39;s Tech Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jay&#39;s Tech Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hexo高级功能" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/03/Hexo高级功能/" class="article-date">
+  <time datetime="2017-02-03T03:51:32.000Z" itemprop="datePublished">2017-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo高级功能
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="添加文档类别及标签"><a href="#添加文档类别及标签" class="headerlink" title="添加文档类别及标签"></a>添加文档类别及标签</h1><h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>首先，在 _config.yml 中设置<br>    post_asset_folder: true<br>注意：该选项一般在默认的_config.yml中有，如图<br><img src="/2017/02/03/Hexo高级功能/hexo-image-config.jpg" alt=""></p>
+<h2 id="md文件中添加"><a href="#md文件中添加" class="headerlink" title="md文件中添加"></a>md文件中添加</h2><p>使用hexo-asset-image插件插入图片</p>
+<p>首先,确认 _config.yml 中有 post_asset_folder:true 。</p>
+<p>其次，在 hexo-blog 目录，执行</p>
+<pre><code>npm install hexo-asset-image --save
+</code></pre><p>假设在</p>
+<pre><code>Hexo高级功能
+├── hexo-image-config.jpg
+└──
+Hexo高级功能.md
+</code></pre><p>这样的目录结构（目录名和文章名一致），只要使用<code>![](/hexo-image-config.jpg)</code> 就可以插入图片。</p>
+<p>参考<a href="http://supermaryy.com/2016/07/02/" target="_blank" rel="external">here</a></p>
+<h1 id="添加latex数学公式"><a href="#添加latex数学公式" class="headerlink" title="添加latex数学公式"></a>添加latex数学公式</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/03/Hexo高级功能/" data-id="ciypa9cgh0004mwn4ay0uv51w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/03/Build-a-tech-blog-by-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">用hexo构建自己的博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/03/Hexo高级功能/">Hexo高级功能</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/03/Build-a-tech-blog-by-hexo/">用hexo构建自己的博客</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/03/hexo-adv/">hexo的高级功能</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/submit-spark-app/">Spark应用的调用方法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/spark_version_switch/">Spark不同版本切换</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Zeng Jay<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

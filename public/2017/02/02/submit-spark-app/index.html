@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Spark应用的调用方法 | Hexo</title>
+  <title>Spark应用的调用方法 | Jay&#39;s Tech Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="spark应用提交到spark集群
 进入$SPARK_HOME，运行
@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spark应用的调用方法">
 <meta property="og:url" content="http://yoursite.com/2017/02/02/submit-spark-app/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Jay's Tech Blog">
 <meta property="og:description" content="spark应用提交到spark集群
 进入$SPARK_HOME，运行
 
@@ -25,7 +25,7 @@
 
 1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Jay&#39;s Tech Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -46,7 +46,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">Jay&#39;s Tech Blog</a>
       </h1>
       
     </div>
@@ -63,7 +63,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -107,7 +107,7 @@
 <p>需要在应用程序目录中执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt assembly</div></pre></td></tr></table></figure>
 <p>在project中添加plugin.sbt，在项目根目录下添加assembly.sbt，在项目根目录下的build.sbt中依赖库spark的后面加上”provided”。这样，才能生成assembly的jar包。</p>
-<h2 id="远程网络服务调用spark应用，将其提交到spark集群"><a href="#远程网络服务调用spark应用，将其提交到spark集群" class="headerlink" title="远程网络服务调用spark应用，将其提交到spark集群"></a>远程网络服务调用spark应用，将其提交到spark集群</h2><ul>
+<h2 id="远程网络服务调用spark应用将其提交到spark集群"><a href="#远程网络服务调用spark应用，将其提交到spark集群" class="headerlink" title="远程网络服务调用spark应用，将其提交到spark集群"></a>远程网络服务调用spark应用，将其提交到spark集群</h2><ul>
 <li><p>javascript调用spark restful 接口无法完成，因为hadoop1的jetty无法进行跨域访问</p>
 </li>
 <li><p>采用java服务的方式来访问</p>
@@ -119,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/02/submit-spark-app/" data-id="ciyoh8bwc000380n4mnd4aknq" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/02/submit-spark-app/" data-id="ciypa9chn0008mwn4k8m7wuwv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,9 +128,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/02/03/hexo-adv/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hexo的高级功能
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/02/02/spark_version_switch/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Spark不同版本切换</div>
     </a>
   
@@ -147,13 +156,27 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
@@ -163,9 +186,21 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/02/03/Hexo高级功能/">Hexo高级功能</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/03/Build-a-tech-blog-by-hexo/">用hexo构建自己的博客</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/03/hexo-adv/">hexo的高级功能</a>
+          </li>
         
           <li>
             <a href="/2017/02/02/submit-spark-app/">Spark应用的调用方法</a>
@@ -173,18 +208,6 @@
         
           <li>
             <a href="/2017/02/02/spark_version_switch/">Spark不同版本切换</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/02/spark_on_mesos/">将Spark运行在mesos上</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/02/mesos/">mesos的配置及部署</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/02/hexo/">建立自己的日志网站</a>
           </li>
         
       </ul>
@@ -199,7 +222,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2017 Zeng Jay<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
