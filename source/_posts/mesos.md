@@ -1,5 +1,7 @@
 ---
 title: mesos的配置及部署
+tags: mesos
+categories: 大数据计算
 toc: true
 ---
 

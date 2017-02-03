@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="spark," />
 
 
 
@@ -96,7 +96,7 @@
 启动mesos进入/usr/local/mesos/sbin执行1$ ./mesos-start-cluster.sh
 启动hadoop 1进入/usr/local/hadoop/hadoop-1.2.1/sbin执行1$ ./start-all.sh
 将spark二进制包上传至hdfs,进">
-<meta property="og:updated_time" content="2017-02-01T16:39:32.812Z">
+<meta property="og:updated_time" content="2017-02-03T15:14:33.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将Spark运行在mesos上">
 <meta name="twitter:description" content="运行启动各个集群服务前，必须保证/etc/hosts中的机器名和对应ip是在每个机器上实际正确对应的！！！
@@ -319,6 +319,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大数据计算/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据计算</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -408,6 +430,12 @@ No credentials provided. Attempting to register without authentication
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/spark/" rel="tag"># spark</a>
+          
+        </div>
       
 
       
@@ -503,11 +531,18 @@ No credentials provided. Attempting to register without authentication
           
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">Kategorien</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">Tags</span>
               </a>
             </div>
@@ -702,6 +737,43 @@ No credentials provided. Attempting to register without authentication
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+	    TeX: {  // TeX/LaTeX input processor
+	      equationNumbers: { autoNumber: "AMS" },  // only number those equations in specific AMSmath environments
+	      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]  // introduce AMS extensions and suppress generating error messages 
+	    },
+	    "HTML-CSS": {  // HTML-CSS output processor (this is the default output of MathJax)
+	      scale: 110,  // The scaling factor of math with respect to the surrounding text
+	      linebreaks: { automatic: true } // automatically breaks the line if necessary
+	    },
+	    SVG: {  // SVG output processor
+	      scale: 110,  // The scaling factor of math with respect to the surrounding text
+	      linebreaks: { automatic: true } // automatically breaks the line if necessary
+	    },
+	    menuSettings: {  // settings for the mathematics contextual menu
+	      zoom: "Hover"  // set equation zooming to be triggered by a single mouse click
+	    }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

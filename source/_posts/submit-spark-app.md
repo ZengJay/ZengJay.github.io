@@ -1,5 +1,8 @@
 ---
 title: Spark应用的调用方法
+tags: spark
+categories: 大数据计算
+toc: true
 ---
 ## spark应用提交到spark集群
 

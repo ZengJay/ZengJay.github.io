@@ -2,6 +2,7 @@
 title: 用hexo构建自己的博客
 date: 2017-02-03 11:39:02
 tags: hexo
+categories: 博客撰写
 toc: true
 ---
 

@@ -1,5 +1,8 @@
 ---
 title: 将Spark运行在mesos上
+tags: spark
+categories: 大数据计算
+toc: true
 ---
 
 运行启动各个集群服务前，必须保证/etc/hosts中的机器名和对应ip是在每个机器上实际正确对应的！！！

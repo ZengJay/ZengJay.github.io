@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="spark," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,25 +84,12 @@
 
 
 
-<meta name="description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Spark应用的调用方法">
-<meta property="og:url" content="http://yoursite.com/2017/02/02/submit-spark-app/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jay's Tech Blog">
+<meta property="og:url" content="http://yoursite.com/tags/spark/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
-<meta property="og:updated_time" content="2017-02-03T15:15:36.260Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spark应用的调用方法">
-<meta name="twitter:description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
+<meta name="twitter:title" content="Jay's Tech Blog">
 
 
 
@@ -130,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/02/submit-spark-app/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/spark/"/>
 
 
 
 
 
-  <title> Spark应用的调用方法 | Jay's Tech Blog </title>
+  <title> Tag: spark | Jay's Tech Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -157,7 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,195 +246,102 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/02/submit-spark-app/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Zeng Jay">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Jay's Tech Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Jay's Tech Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Spark应用的调用方法
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-02T22:28:03+08:00">
-                2017-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">in</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大数据计算/" itemprop="url" rel="index">
-                    <span itemprop="name">大数据计算</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="spark应用提交到spark集群"><a href="#spark应用提交到spark集群" class="headerlink" title="spark应用提交到spark集群"></a>spark应用提交到spark集群</h2><ul>
-<li>进入$SPARK_HOME，运行</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/scala-2.10/spark-cluster-test-assembly-1.0.jar</div></pre></td></tr></table></figure>
-<ul>
-<li>spark应用包的生成 </li>
-</ul>
-<p>在应用程序目录中执行包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt package</div></pre></td></tr></table></figure>
-<p>这样生成的spark包，关联包无法加载</p>
-<p>需要在应用程序目录中执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt assembly</div></pre></td></tr></table></figure>
-<p>在project中添加plugin.sbt，在项目根目录下添加assembly.sbt，在项目根目录下的build.sbt中依赖库spark的后面加上”provided”。这样，才能生成assembly的jar包。</p>
-<h2 id="远程网络服务调用spark应用将其提交到spark集群"><a href="#远程网络服务调用spark应用，将其提交到spark集群" class="headerlink" title="远程网络服务调用spark应用，将其提交到spark集群"></a>远程网络服务调用spark应用，将其提交到spark集群</h2><ul>
-<li><p>javascript调用spark restful 接口无法完成，因为hadoop1的jetty无法进行跨域访问</p>
-</li>
-<li><p>采用java服务的方式来访问</p>
-</li>
-<li><p>远程提交spark应用中，需要在集群的节点中添加/tmp/spark-events/目录</p>
-</li>
-</ul>
-
-      
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        spark
+        <small>Tag</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-
-      
-    </div>
-
-    <div>
-      
+            <a class="post-title-link" href="/2017/02/02/submit-spark-app/" itemprop="url">
+              
+                <span itemprop="name">Spark应用的调用方法</span>
+              
+            </a>
         
+      </h1>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-02-02T22:28:03+08:00"
+              content="2017-02-02" >
+          02-02
+        </time>
+      </div>
 
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/spark/" rel="tag"># spark</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/02/02/spark_version_switch/" rel="next" title="Spark不同版本切换">
-                <i class="fa fa-chevron-left"></i> Spark不同版本切换
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/03/Build-a-tech-blog-by-hexo/" rel="prev" title="用hexo构建自己的博客">
-                用hexo构建自己的博客 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
+    
       
-    </div>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2017/02/02/spark_version_switch/" itemprop="url">
+              
+                <span itemprop="name">Spark不同版本切换</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-02-02T22:28:03+08:00"
+              content="2017-02-02" >
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2017/02/02/spark_on_mesos/" itemprop="url">
+              
+                <span itemprop="name">将Spark运行在mesos上</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-02-02T22:28:03+08:00"
+              content="2017-02-02" >
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
   </div>
+
+  
 
           
           </div>
@@ -455,10 +349,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -478,17 +368,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -544,22 +425,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#spark应用提交到spark集群"><span class="nav-number">1.</span> <span class="nav-text">spark应用提交到spark集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程网络服务调用spark应用将其提交到spark集群"><span class="nav-number">2.</span> <span class="nav-text">远程网络服务调用spark应用，将其提交到spark集群</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
@@ -666,10 +531,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 
@@ -701,10 +562,6 @@
 
   
 
-  
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
-      <!-- UY END -->
   
 
 
