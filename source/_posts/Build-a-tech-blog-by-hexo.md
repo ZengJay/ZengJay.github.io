@@ -143,7 +143,7 @@ More info: [Server](https://hexo.io/docs/server.html)
     git add README.md
     git commit -m "first commit"
     git remote add origin https://github.com/ZengJay/zengjay.github.io.git
-    git push -u origin maste
+    git push -u origin master
 ```
 
 + 构建git的hexo分支
