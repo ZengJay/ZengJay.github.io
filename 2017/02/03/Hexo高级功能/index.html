@@ -3,27 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Spark应用的调用方法 | Jay&#39;s Tech Blog</title>
+  <title>Hexo高级功能 | Jay&#39;s Tech Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
+  <meta name="description" content="添加文档类别及标签添加图片配置首先，在 _config.yml 中设置    post_asset_folder: true注意：该选项一般在默认的_config.yml中有，如图
+md文件中添加使用hexo-asset-image插件插入图片
+首先,确认 _config.yml 中有 post_asset_folder:true 。
+其次，在 hexo-blog 目录，执行
+npm instal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spark应用的调用方法">
-<meta property="og:url" content="http://yoursite.com/2017/02/02/submit-spark-app/index.html">
+<meta property="og:title" content="Hexo高级功能">
+<meta property="og:url" content="http://yoursite.com/2017/02/03/Hexo高级功能/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
-<meta property="og:updated_time" content="2017-02-01T16:33:57.767Z">
+<meta property="og:description" content="添加文档类别及标签添加图片配置首先，在 _config.yml 中设置    post_asset_folder: true注意：该选项一般在默认的_config.yml中有，如图
+md文件中添加使用hexo-asset-image插件插入图片
+首先,确认 _config.yml 中有 post_asset_folder:true 。
+其次，在 hexo-blog 目录，执行
+npm instal">
+<meta property="og:image" content="http://yoursite.com/2017/02/03/Hexo高级功能/hexo-image-config.jpg">
+<meta property="og:updated_time" content="2017-02-03T04:18:43.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spark应用的调用方法">
-<meta name="twitter:description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
+<meta name="twitter:title" content="Hexo高级功能">
+<meta name="twitter:description" content="添加文档类别及标签添加图片配置首先，在 _config.yml 中设置    post_asset_folder: true注意：该选项一般在默认的_config.yml中有，如图
+md文件中添加使用hexo-asset-image插件插入图片
+首先,确认 _config.yml 中有 post_asset_folder:true 。
+其次，在 hexo-blog 目录，执行
+npm instal">
+<meta name="twitter:image" content="http://yoursite.com/2017/02/03/Hexo高级功能/hexo-image-config.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Jay&#39;s Tech Blog" type="application/atom+xml">
   
@@ -72,10 +77,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-submit-spark-app" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Hexo高级功能" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/02/02/submit-spark-app/" class="article-date">
-  <time datetime="2017-02-02T14:28:03.453Z" itemprop="datePublished">2017-02-02</time>
+    <a href="/2017/02/03/Hexo高级功能/" class="article-date">
+  <time datetime="2017-02-03T03:51:32.000Z" itemprop="datePublished">2017-02-03</time>
 </a>
     
   </div>
@@ -86,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Spark应用的调用方法
+      Hexo高级功能
     </h1>
   
 
@@ -94,32 +99,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="spark应用提交到spark集群"><a href="#spark应用提交到spark集群" class="headerlink" title="spark应用提交到spark集群"></a>spark应用提交到spark集群</h2><ul>
-<li>进入$SPARK_HOME，运行</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/scala-2.10/spark-cluster-test-assembly-1.0.jar</div></pre></td></tr></table></figure>
-<ul>
-<li>spark应用包的生成 </li>
-</ul>
-<p>在应用程序目录中执行包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt package</div></pre></td></tr></table></figure>
-<p>这样生成的spark包，关联包无法加载</p>
-<p>需要在应用程序目录中执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt assembly</div></pre></td></tr></table></figure>
-<p>在project中添加plugin.sbt，在项目根目录下添加assembly.sbt，在项目根目录下的build.sbt中依赖库spark的后面加上”provided”。这样，才能生成assembly的jar包。</p>
-<h2 id="远程网络服务调用spark应用将其提交到spark集群"><a href="#远程网络服务调用spark应用，将其提交到spark集群" class="headerlink" title="远程网络服务调用spark应用，将其提交到spark集群"></a>远程网络服务调用spark应用，将其提交到spark集群</h2><ul>
-<li><p>javascript调用spark restful 接口无法完成，因为hadoop1的jetty无法进行跨域访问</p>
-</li>
-<li><p>采用java服务的方式来访问</p>
-</li>
-<li><p>远程提交spark应用中，需要在集群的节点中添加/tmp/spark-events/目录</p>
-</li>
-</ul>
-
+        <h1 id="添加文档类别及标签"><a href="#添加文档类别及标签" class="headerlink" title="添加文档类别及标签"></a>添加文档类别及标签</h1><h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>首先，在 _config.yml 中设置<br>    post_asset_folder: true<br>注意：该选项一般在默认的_config.yml中有，如图<br><img src="/2017/02/03/Hexo高级功能/hexo-image-config.jpg" alt=""></p>
+<h2 id="md文件中添加"><a href="#md文件中添加" class="headerlink" title="md文件中添加"></a>md文件中添加</h2><p>使用hexo-asset-image插件插入图片</p>
+<p>首先,确认 _config.yml 中有 post_asset_folder:true 。</p>
+<p>其次，在 hexo-blog 目录，执行</p>
+<pre><code>npm install hexo-asset-image --save
+</code></pre><p>假设在</p>
+<pre><code>Hexo高级功能
+├── hexo-image-config.jpg
+└──
+Hexo高级功能.md
+</code></pre><p>这样的目录结构（目录名和文章名一致），只要使用<code>![](/hexo-image-config.jpg)</code> 就可以插入图片。</p>
+<p>参考<a href="http://supermaryy.com/2016/07/02/" target="_blank" rel="external">here</a></p>
+<h1 id="添加latex数学公式"><a href="#添加latex数学公式" class="headerlink" title="添加latex数学公式"></a>添加latex数学公式</h1>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/02/submit-spark-app/" data-id="ciypa9chn0008mwn4k8m7wuwv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/03/Hexo高级功能/" data-id="ciypa9cgh0004mwn4ay0uv51w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,19 +124,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/02/03/hexo-adv/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          hexo的高级功能
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/02/02/spark_version_switch/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/02/03/Build-a-tech-blog-by-hexo/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Spark不同版本切换</div>
+      <div class="article-nav-title">用hexo构建自己的博客</div>
     </a>
   
 </nav>
