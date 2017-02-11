@@ -107,7 +107,7 @@ github的密匙配置确认windows下的当前用户名的目录下没有.ssh目
 提示会让输入保存密匙的文件名(含路径)。
 生成SSH KEY的时">
 <meta property="og:image" content="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/public-key-access-right.jpg">
-<meta property="og:updated_time" content="2017-02-03T15:12:53.784Z">
+<meta property="og:updated_time" content="2017-02-03T16:01:27.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo构建自己的博客">
 <meta name="twitter:description" content="必要软件的安装需要安装的软件
@@ -467,7 +467,12 @@ git commit -m &quot;&quot;
 git pull origin hexo
 // 比较解决前后版本冲突后，push源文件到Github的分支
 git push origin hexo
-</code></pre><p>参考<a href="https://sawyersun.github.io/2017/01/20/Using-git-branch-manage-hexo-blog/" target="_blank" rel="external">here</a>，<a href="http://www.jianshu.com/p/6fb0b287f950" target="_blank" rel="external">here</a></p>
+</code></pre><ol>
+<li>新机器上变更md文件，最好只将md文件提交到github</li>
+<li>新机器上最好只hexo g与hexo s，不要运行hexo d，hexo d将生成的博客站点文件git推到github的博客站点的master分支上去了。</li>
+<li>hexo d 只由最原始的机器上布设？？</li>
+</ol>
+<p>参考<a href="https://sawyersun.github.io/2017/01/20/Using-git-branch-manage-hexo-blog/" target="_blank" rel="external">here</a>，<a href="http://www.jianshu.com/p/6fb0b287f950" target="_blank" rel="external">here</a></p>
 <ul>
 <li>版本控制和持续集成</li>
 </ul>
@@ -521,8 +526,8 @@ git push origin hexo
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/02/submit-spark-app/" rel="next" title="Spark应用的调用方法">
-                <i class="fa fa-chevron-left"></i> Spark应用的调用方法
+              <a href="/2017/02/02/spark_version_switch/" rel="next" title="Spark不同版本切换">
+                <i class="fa fa-chevron-left"></i> Spark不同版本切换
               </a>
             
           </div>
@@ -603,7 +608,7 @@ git push origin hexo
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>

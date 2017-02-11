@@ -84,25 +84,16 @@
 
 
 
-<meta name="description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
+<meta name="description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spark应用的调用方法">
-<meta property="og:url" content="http://yoursite.com/2017/02/02/submit-spark-app/index.html">
+<meta property="og:title" content="spark调试">
+<meta property="og:url" content="http://yoursite.com/2017/02/06/spark-debug/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
-<meta property="og:updated_time" content="2017-02-03T15:15:36.260Z">
+<meta property="og:description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里">
+<meta property="og:updated_time" content="2017-02-11T13:55:59.670Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spark应用的调用方法">
-<meta name="twitter:description" content="spark应用提交到spark集群
-进入$SPARK_HOME，运行
-
-1bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/sca">
+<meta name="twitter:title" content="spark调试">
+<meta name="twitter:description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里">
 
 
 
@@ -130,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/02/submit-spark-app/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/06/spark-debug/"/>
 
 
 
 
 
-  <title> Spark应用的调用方法 | Jay's Tech Blog </title>
+  <title> spark调试 | Jay's Tech Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -269,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/02/submit-spark-app/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/06/spark-debug/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Zeng Jay">
@@ -293,7 +284,7 @@
             
             
               
-                Spark应用的调用方法
+                spark调试
               
             
           </h1>
@@ -308,8 +299,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-02T22:28:03+08:00">
-                2017-02-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-06T14:30:36+08:00">
+                2017-02-06
               </time>
             
 
@@ -366,27 +357,7 @@
       
 
       
-        <h2 id="spark应用提交到spark集群"><a href="#spark应用提交到spark集群" class="headerlink" title="spark应用提交到spark集群"></a>spark应用提交到spark集群</h2><ul>
-<li>进入$SPARK_HOME，运行</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/scala-2.10/spark-cluster-test-assembly-1.0.jar</div></pre></td></tr></table></figure>
-<ul>
-<li>spark应用包的生成 </li>
-</ul>
-<p>在应用程序目录中执行包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt package</div></pre></td></tr></table></figure>
-<p>这样生成的spark包，关联包无法加载</p>
-<p>需要在应用程序目录中执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt assembly</div></pre></td></tr></table></figure>
-<p>在project中添加plugin.sbt，在项目根目录下添加assembly.sbt，在项目根目录下的build.sbt中依赖库spark的后面加上”provided”。这样，才能生成assembly的jar包。</p>
-<h2 id="远程网络服务调用spark应用将其提交到spark集群"><a href="#远程网络服务调用spark应用，将其提交到spark集群" class="headerlink" title="远程网络服务调用spark应用，将其提交到spark集群"></a>远程网络服务调用spark应用，将其提交到spark集群</h2><ul>
-<li><p>javascript调用spark restful 接口无法完成，因为hadoop1的jetty无法进行跨域访问</p>
-</li>
-<li><p>采用java服务的方式来访问</p>
-</li>
-<li><p>远程提交spark应用中，需要在集群的节点中添加/tmp/spark-events/目录</p>
-</li>
-</ul>
+        <h1 id="spark应用程序调试方法"><a href="#Spark应用程序调试方法" class="headerlink" title="Spark应用程序调试方法"></a>Spark应用程序调试方法</h1><h1 id="spark调试问题"><a href="#Spark调试问题" class="headerlink" title="Spark调试问题"></a>Spark调试问题</h1><h2 id="远程调试方法"><a href="#远程调试方法" class="headerlink" title="远程调试方法"></a>远程调试方法</h2><p><a href="http://www.voidcn.com/blog/ASIA_kobe/article/p-5783303.html" target="_blank" rel="external">这里</a></p>
 
       
     </div>
@@ -419,8 +390,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/02/spark_version_switch/" rel="next" title="Spark不同版本切换">
-                <i class="fa fa-chevron-left"></i> Spark不同版本切换
+              <a href="/2017/02/06/spark-app/" rel="next" title="Spark应用的调用方法">
+                <i class="fa fa-chevron-left"></i> Spark应用的调用方法
               </a>
             
           </div>
@@ -428,10 +399,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/03/Build-a-tech-blog-by-hexo/" rel="prev" title="用hexo构建自己的博客">
-                用hexo构建自己的博客 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,7 +468,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -554,7 +521,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#spark应用提交到spark集群"><span class="nav-number">1.</span> <span class="nav-text">spark应用提交到spark集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程网络服务调用spark应用将其提交到spark集群"><span class="nav-number">2.</span> <span class="nav-text">远程网络服务调用spark应用，将其提交到spark集群</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spark应用程序调试方法"><span class="nav-number">1.</span> <span class="nav-text">Spark应用程序调试方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#spark调试问题"><span class="nav-number">2.</span> <span class="nav-text">Spark调试问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#远程调试方法"><span class="nav-number">2.1.</span> <span class="nav-text">远程调试方法</span></a></li></ol></li></ol></div>
             
 
           </div>
