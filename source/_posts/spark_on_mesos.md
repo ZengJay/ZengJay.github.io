@@ -59,7 +59,7 @@ $ sudo vi spark-defaults.conf
 ```bash
 $ ./start-history-server.sh
 $ ./start-all.sh
-$ ./start-mesos-dispatch.sh
+$ ./start-mesos-dispatch.sh -m mesos://master:5050
 $ cd ..
 $ cd bin
 $ ./spark-shell
@@ -93,3 +93,11 @@ master的logs文件中发现命令行的ip为老局域网ip，在spark工作目�
 + 原因
 
      spark未运行start-mesos-dispatch.sh ?
+
+
+### 问题4 
+historyServer无法启动！
+
++原因
+
+查看SPARK_HOME/logs下的historyserver的log文件发现缺少/tmp/spark-events目录，在所有计算节点机器上建立该目录

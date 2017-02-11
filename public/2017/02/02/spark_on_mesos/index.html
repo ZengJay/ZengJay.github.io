@@ -96,7 +96,7 @@
 启动mesos进入/usr/local/mesos/sbin执行1$ ./mesos-start-cluster.sh
 启动hadoop 1进入/usr/local/hadoop/hadoop-1.2.1/sbin执行1$ ./start-all.sh
 将spark二进制包上传至hdfs,进">
-<meta property="og:updated_time" content="2017-02-03T15:14:33.155Z">
+<meta property="og:updated_time" content="2017-02-05T07:43:12.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将Spark运行在mesos上">
 <meta name="twitter:description" content="运行启动各个集群服务前，必须保证/etc/hosts中的机器名和对应ip是在每个机器上实际正确对应的！！！
@@ -389,7 +389,7 @@ spark.master mesos://Master:5050
 <p>进入/usr/local/spark/spark-1.4.1-bin-hadoop1/sbin</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ ./start-history-server.sh</div><div class="line">$ ./start-all.sh</div><div class="line">$ ./start-mesos-dispatch.sh</div><div class="line">$ <span class="built_in">cd</span> ..</div><div class="line">$ <span class="built_in">cd</span> bin</div><div class="line">$ ./spark-shell</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ ./start-history-server.sh</div><div class="line">$ ./start-all.sh</div><div class="line">$ ./start-mesos-dispatch.sh -m mesos://master:5050</div><div class="line">$ <span class="built_in">cd</span> ..</div><div class="line">$ <span class="built_in">cd</span> bin</div><div class="line">$ ./spark-shell</div></pre></td></tr></table></figure>
 <h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><p>master机器jps命令下，spark的Master未启动</p>
 <ul>
 <li>原因<br>master的logs文件中发现命令行的ip为老局域网ip，在spark工作目录的conf下的spark-env.sh文件中，修改SPARK_MASTER_IP为新局域网中的master机器ip。</li>
@@ -410,6 +410,9 @@ No credentials provided. Attempting to register without authentication
 <p>   spark未运行start-mesos-dispatch.sh ?</p>
 </li>
 </ul>
+<h3 id="问题4"><a href="#问题4" class="headerlink" title="问题4"></a>问题4</h3><p>historyServer无法启动！</p>
+<p>+原因</p>
+<p>查看SPARK_HOME/logs下的historyserver的log文件发现缺少/tmp/spark-events目录，在所有计算节点机器上建立该目录</p>
 
       
     </div>
@@ -524,7 +527,7 @@ No credentials provided. Attempting to register without authentication
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -577,7 +580,7 @@ No credentials provided. Attempting to register without authentication
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动mesos"><span class="nav-number">1.</span> <span class="nav-text">启动mesos</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动hadoop-1"><span class="nav-number">2.</span> <span class="nav-text">启动hadoop 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spark-on-mesos的配置与启动"><span class="nav-number">3.</span> <span class="nav-text">spark on mesos的配置与启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题1"><span class="nav-number">3.1.</span> <span class="nav-text">问题1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题2"><span class="nav-number">3.2.</span> <span class="nav-text">问题2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题3"><span class="nav-number">3.3.</span> <span class="nav-text">问题3</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动mesos"><span class="nav-number">1.</span> <span class="nav-text">启动mesos</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动hadoop-1"><span class="nav-number">2.</span> <span class="nav-text">启动hadoop 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spark-on-mesos的配置与启动"><span class="nav-number">3.</span> <span class="nav-text">spark on mesos的配置与启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题1"><span class="nav-number">3.1.</span> <span class="nav-text">问题1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题2"><span class="nav-number">3.2.</span> <span class="nav-text">问题2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题3"><span class="nav-number">3.3.</span> <span class="nav-text">问题3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题4"><span class="nav-number">3.4.</span> <span class="nav-text">问题4</span></a></li></ol></li></ol></div>
             
 
           </div>
