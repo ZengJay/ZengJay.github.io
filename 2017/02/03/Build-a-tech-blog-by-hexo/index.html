@@ -107,7 +107,7 @@ github的密匙配置确认windows下的当前用户名的目录下没有.ssh目
 提示会让输入保存密匙的文件名(含路径)。
 生成SSH KEY的时">
 <meta property="og:image" content="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/public-key-access-right.jpg">
-<meta property="og:updated_time" content="2017-02-03T16:01:27.288Z">
+<meta property="og:updated_time" content="2017-11-26T22:40:09.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo构建自己的博客">
 <meta name="twitter:description" content="必要软件的安装需要安装的软件
@@ -437,27 +437,24 @@ branch: master
 <h3 id="在不同机器上对hexo的源码进行版本管理"><a href="#在不同机器上对hexo的源码进行版本管理" class="headerlink" title="在不同机器上对hexo的源码进行版本管理"></a>在不同机器上对hexo的源码进行版本管理</h3><ul>
 <li><a href=""><strong>在建立好博客的本地源码后，不要部署到github的zengjay.github.com上。</strong></a></li>
 <li>在hexo-blog目录下构建git的master分支与hexo分支。master分支用来管理博客网页；hexo分支用来管理hexo的源码。</li>
-<li>构建git的master分支</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"# zengjay.github.io"</span> &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m <span class="string">"first commit"</span></div><div class="line">git remote add origin https://github.com/ZengJay/zengjay.github.io.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
-<ul>
-<li>构建git的hexo分支</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git checkout -b hexo //创建并切换到hexo分支</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"hexo initial commit"</span></div><div class="line">git push -u origin hexo</div></pre></td></tr></table></figure>
-<ul>
-<li>hexo部署</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
-<ul>
-<li>更新hexo源码后，提交到github</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">"更新内容"</span></div><div class="line">git push -u origin hexo</div></pre></td></tr></table></figure>
-<ul>
-<li>新机器的hexo源码部署</li>
+<li><p>构建git的master分支</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"# zengjay.github.io"</span> &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m <span class="string">"first commit"</span></div><div class="line">git remote add origin https://github.com/ZengJay/zengjay.github.io.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+</li>
+<li><p>构建git的hexo分支</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git checkout -b hexo //创建并切换到hexo分支</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"hexo initial commit"</span></div><div class="line">git push -u origin hexo</div></pre></td></tr></table></figure>
+</li>
+<li><p>生成静态文件并部署到master分支</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+</li>
+<li><p>更新hexo源码后，提交到github</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">"更新内容"</span></div><div class="line">git push -u origin hexo</div></pre></td></tr></table></figure>
+</li>
+<li><p>另一新机器的hexo源码部署</p>
+</li>
 </ul>
 <p>首先，将hexo源码clone到新机器某目录下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> -b hexo https://github.com/username/username.git [新机器hexo源码目录]</div></pre></td></tr></table></figure>
-<p>然后，在source目录下更改博客内容md文件。</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> -b hexo https://github.com/username/username.git [新机器hexo源码目录]</div></pre></td></tr></table></figure>
+</code></pre><p>然后，在source目录下更改博客内容md文件。</p>
 <p>完成后可以用hexo g生成博客网页，hexo d部署博客网页。并通过下面git操作将源文件提交到github。</p>
 <pre><code>// 添加源文件
 git add .
@@ -483,8 +480,8 @@ git push origin hexo
 <p>运行</p>
 <pre><code>ssh -T git@github.com
 </code></pre><p>出现如下问题</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Warning: Permanently added <span class="string">"github.com,*.*.*.*"</span>(RSA) to the list of known hosts.</div><div class="line">Permission denied(public key).</div></pre></td></tr></table></figure>
-<p>原因：</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Warning: Permanently added <span class="string">"github.com,*.*.*.*"</span>(RSA) to the list of known hosts.</div><div class="line">Permission denied(public key).</div></pre></td></tr></table></figure>
+</code></pre><p>原因：</p>
 <p>安装了github for windows，其ssh配置文件中认证文件为~.ssh\github_rsa，ssh-keygen生成的不是此文件，因此，可以重装github，并把github_rsa文件的密匙添加到github网站个人信息中即可。</p>
 <p>详细请参考<a href="http://www.cnblogs.com/zjrodger/p/3952692.html" target="_blank" rel="external">网站</a></p>
 <ul>
@@ -608,7 +605,7 @@ git push origin hexo
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
