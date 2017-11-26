@@ -182,7 +182,7 @@ More info: [Server](https://hexo.io/docs/server.html)
 
 然后，在source目录下更改博客内容md文件。
 
-完成后可以用hexo g生成博客网页，hexo d部署博客网页。并通过下面git操作将源文件提交到github。
+完成后可以用hexo g生成博客网页，hexo d部署博客网页。并通过下面git操作将博客源码文件（分支hexo）提交到github。
 
     // 添加源文件
     git add .
