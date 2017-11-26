@@ -107,7 +107,7 @@ github的密匙配置确认windows下的当前用户名的目录下没有.ssh目
 提示会让输入保存密匙的文件名(含路径)。
 生成SSH KEY的时">
 <meta property="og:image" content="http://yoursite.com/2017/02/03/Build-a-tech-blog-by-hexo/public-key-access-right.jpg">
-<meta property="og:updated_time" content="2017-11-26T23:13:30.764Z">
+<meta property="og:updated_time" content="2017-11-26T23:16:29.354Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo构建自己的博客">
 <meta name="twitter:description" content="必要软件的安装需要安装的软件
@@ -455,16 +455,9 @@ branch: master
 <p>首先，将hexo源码clone到新机器某目录下</p>
 <pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> -b hexo https://github.com/username/username.git [新机器hexo源码目录]</div></pre></td></tr></table></figure>
 </code></pre><p>然后，在source目录下更改博客内容md文件。</p>
-<p>完成后可以用hexo g生成博客网页，hexo d部署博客网页。并通过下面git操作将博客源码文件（分支hexo）提交到github。</p>
-<pre><code>// 添加源文件
-git add .
-// git提交
-git commit -m &quot;&quot;
-// 先拉原来Github分支上的源文件到本地，进行合并
-git pull origin hexo
-// 比较解决前后版本冲突后，push源文件到Github的分支
-git push origin hexo
-</code></pre><ol>
+<p>完成后可以用hexo g生成博客网页，hexo d部署博客网页。</p>
+<p>并通过下面git操作将博客源码文件（分支hexo）提交到github。<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">  // 添加源文件</div><div class="line">git add .</div><div class="line">// git提交</div><div class="line">git commit -m <span class="string">""</span></div><div class="line">// 先拉原来Github分支上的源文件到本地，进行合并</div><div class="line">git pull origin hexo</div><div class="line">// 比较解决前后版本冲突后，push源文件到Github的分支</div><div class="line">git push origin hexo</div></pre></td></tr></table></figure></p>
+<ol>
 <li>新机器上变更md文件，最好只将md文件提交到github</li>
 <li>新机器上最好只hexo g与hexo s，不要运行hexo d，hexo d将生成的博客站点文件git推到github的博客站点的master分支上去了。</li>
 <li>hexo d 只由最原始的机器上布设？？</li>
