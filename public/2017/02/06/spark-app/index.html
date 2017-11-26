@@ -96,7 +96,7 @@
 另外，在assembly.sbt中为避免冲突，添加如下代码：    mergeStrategy in assembly">
 <meta property="og:image" content="http://yoursite.com/2017/02/06/spark-app/build-sbt-spark.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/02/06/spark-app/mesos-dispatcher-port.jpg">
-<meta property="og:updated_time" content="2017-02-11T14:13:47.716Z">
+<meta property="og:updated_time" content="2017-02-11T14:27:56.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark应用的调用方法">
 <meta name="twitter:description" content="spark应用编译注意事项sbt编译时运行sbt compile时build.sbt文件中spark的lib依赖不加provided
@@ -387,8 +387,8 @@
 <p><strong>上述所有集群启动命令完成后，提示启动过程的日志文件，启动中出现的状态、问题均记录在对应log文件中，有些情况下不同计算服务的端口是有变化，可以在日志中看到！！</strong></p>
 <h2 id="spark应用提交到spark集群"><a href="#spark应用提交到spark集群" class="headerlink" title="spark应用提交到spark集群"></a>spark应用提交到spark集群</h2><h3 id="将应用jar提交到hadoop"><a href="#将应用jar提交到hadoop" class="headerlink" title="将应用jar提交到hadoop"></a>将应用jar提交到hadoop</h3><p>注意，如果提交到spark on mesos来计算的话，需要将mesos中的配置文件mesos_master_env.sh及mesos_slave_env.sh中加入HADOOP_HOME的设置,这样mesos集群才能运行hadoop的命令。</p>
 <h3 id="一般情况"><a href="#一般情况" class="headerlink" title="一般情况"></a>一般情况</h3><p>进入$SPARK_HOME，运行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/Downloads/spark-cluster-test/target/scala-2.10/spark-cluster-test-assembly-1.0.jar</div></pre></td></tr></table></figure>
-<p><strong>注意：file://…/</strong>.jar，jar包应该在集群所有节点上的相同目录下均有该包**</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$SPARK_HOME</span>/bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/<span class="built_in">test</span>-jar/spark-cluster-test.jar</div></pre></td></tr></table></figure>
+<p><strong>注意：file:///…/</strong>.jar，jar包应该在集群所有节点上的相同目录下均有该包，file后面是三个反斜杠！！！**</p>
 <p>或者将jar上传至hadoop集群文件系统，用hdfs：//路径也可以</p>
 <h3 id="spark应用包的生成"><a href="#spark应用包的生成" class="headerlink" title="spark应用包的生成"></a>spark应用包的生成</h3><p>在应用程序目录中执行包</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sbt package</div></pre></td></tr></table></figure>
@@ -398,7 +398,7 @@
 <p>在project中添加plugin.sbt，在项目根目录下添加assembly.sbt，在项目根目录下的build.sbt中依赖库spark的后面加上”provided”。这样，才能生成assembly的jar包。</p>
 <h3 id="spark-on-mesos的情况"><a href="#spark-on-mesos的情况" class="headerlink" title="spark on mesos的情况"></a>spark on mesos的情况</h3><p>必须先在spark home的sbin目录下启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./start-mesos-dispatcher.sh -m mesos://192.168.1.103:5050</div></pre></td></tr></table></figure></p>
 <p>查看其log文件，如图<br><img src="/2017/02/06/spark-app/mesos-dispatcher-port.jpg" alt=""><br>由此可见7077端口已被standalone spark集群占据了，故spark on mesos采用7078端口！！，后面用spark-submit提交spark app需要采用7078。</p>
-<p>然后再提交spark应用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$SPARK_HOME</span>/bin/spark-submit --master mesos://192.168.1.103:6066 --deploy-mode cluster --class arterial_research.socc.experiments.Streaming32A /root/Downloads/open-traffic-arterial-streaming/target/scala-2.10/arterial-modela-assembly-1.0.jar</div></pre></td></tr></table></figure></p>
+<p>然后再提交spark应用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$SPARK_HOME</span>/bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master mesos://master:7078 --deploy-mode cluster file:///root/<span class="built_in">test</span>-jar/spark-cluster-test.jar</div></pre></td></tr></table></figure></p>
 <h3 id="远程网络服务调用spark应用将其提交到spark集群"><a href="#远程网络服务调用spark应用，将其提交到spark集群" class="headerlink" title="远程网络服务调用spark应用，将其提交到spark集群"></a>远程网络服务调用spark应用，将其提交到spark集群</h3><ul>
 <li><p>javascript调用spark restful 接口无法完成，因为hadoop1的jetty无法进行跨域访问</p>
 </li>
@@ -521,7 +521,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -530,7 +530,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
@@ -539,7 +539,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">Tags</span>
               </a>
             </div>

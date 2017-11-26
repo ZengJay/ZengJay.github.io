@@ -84,16 +84,34 @@
 
 
 
-<meta name="description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里">
+<meta name="description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里here
+Spark源代码的跟踪调试1 spark assembly库包加入IDEA的工程中，并关联上源码
+2 设置环境变量export JAVA_OPTS =-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005
+
+JVM调试参数说明：
+
+-Xdebug">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spark调试">
 <meta property="og:url" content="http://yoursite.com/2017/02/06/spark-debug/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里">
-<meta property="og:updated_time" content="2017-02-11T13:55:59.670Z">
+<meta property="og:description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里here
+Spark源代码的跟踪调试1 spark assembly库包加入IDEA的工程中，并关联上源码
+2 设置环境变量export JAVA_OPTS =-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005
+
+JVM调试参数说明：
+
+-Xdebug">
+<meta property="og:updated_time" content="2017-03-12T00:56:06.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spark调试">
-<meta name="twitter:description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里">
+<meta name="twitter:description" content="Spark应用程序调试方法Spark调试问题远程调试方法这里here
+Spark源代码的跟踪调试1 spark assembly库包加入IDEA的工程中，并关联上源码
+2 设置环境变量export JAVA_OPTS =-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005
+
+JVM调试参数说明：
+
+-Xdebug">
 
 
 
@@ -357,7 +375,45 @@
       
 
       
-        <h1 id="spark应用程序调试方法"><a href="#Spark应用程序调试方法" class="headerlink" title="Spark应用程序调试方法"></a>Spark应用程序调试方法</h1><h1 id="spark调试问题"><a href="#Spark调试问题" class="headerlink" title="Spark调试问题"></a>Spark调试问题</h1><h2 id="远程调试方法"><a href="#远程调试方法" class="headerlink" title="远程调试方法"></a>远程调试方法</h2><p><a href="http://www.voidcn.com/blog/ASIA_kobe/article/p-5783303.html" target="_blank" rel="external">这里</a></p>
+        <h1 id="spark应用程序调试方法"><a href="#Spark应用程序调试方法" class="headerlink" title="Spark应用程序调试方法"></a>Spark应用程序调试方法</h1><h1 id="spark调试问题"><a href="#Spark调试问题" class="headerlink" title="Spark调试问题"></a>Spark调试问题</h1><h2 id="远程调试方法"><a href="#远程调试方法" class="headerlink" title="远程调试方法"></a>远程调试方法</h2><p><a href="http://www.voidcn.com/blog/ASIA_kobe/article/p-5783303.html" target="_blank" rel="external">这里</a><br><a href="http://www.voidcn.com/blog/ASIA_kobe/article/p-5783303.html" target="_blank" rel="external">here</a></p>
+<h3 id="spark源代码的跟踪调试"><a href="#Spark源代码的跟踪调试" class="headerlink" title="Spark源代码的跟踪调试"></a>Spark源代码的跟踪调试</h3><p>1 spark assembly库包加入IDEA的工程中，并关联上源码</p>
+<p>2 设置环境变量<br>export JAVA_OPTS =-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</p>
+<ul>
+<li>JVM调试参数说明：</li>
+</ul>
+<p>-Xdebug 启用调试特性</p>
+<p>-Xrunjdwp 启用JDWP实现，包含若干子选项：</p>
+<p>transport=dt_socket JPDA front-end和back-end之间的传输方法。dt_socket表示使用套接字传输。</p>
+<p>address=5005 JVM在5005端口上监听请求，这个设定为一个不冲突的端口即可。</p>
+<p>server=y y表示启动的JVM是被调试者。如果为n，则表示启动的JVM是调试器。</p>
+<p>suspend=y y表示启动的JVM会暂停等待，直到调试器连接上才继续执行。suspend=n，则JVM不会暂停等待。</p>
+<p>3 修改spark-class脚本<br>本机器上的spark-class脚本位于/hadoopLearning/spark-1.5.0-bin-hadoop2.4/bin目录<br>将脚本中的内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">done</span> &lt; &lt;(<span class="string">"<span class="variable">$RUNNER</span>"</span> -cp <span class="string">"<span class="variable">$LAUNCH_CLASSPATH</span>"</span> org.apache.spark.launcher.Main <span class="string">"<span class="variable">$@</span>"</span>)</div></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">done</span> &lt; &lt;(<span class="string">"<span class="variable">$RUNNER</span>"</span> -cp <span class="string">"<span class="variable">$LAUNCH_CLASSPATH</span>"</span> org.apache.spark.launcher.Main <span class="variable">$JAVA_OPTS</span> <span class="string">"<span class="variable">$@</span>"</span>)</div></pre></td></tr></table></figure>
+<p>4 IDEA添加远程调试</p>
+<p>端口号与JVM设置的参数一致，host为spark-submit提交的机器master，即spark运行的机器<br>远程debug方式选择attach</p>
+<p>5 在spark源码设置断点<br>比如 sparksubmit.scala中main方法设置断点</p>
+<p>6 standalone方式运行spark app</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$SPARK_HOME</span>/bin/spark-submit --class spark.tutorial.geo.GeoTutorialExec --master spark://master:6066 --deploy-mode cluster file:///root/<span class="built_in">test</span>-jar/spark-cluster-test.jar</div></pre></td></tr></table></figure>
+<p>返回</p>
+<pre><code>Listening for transport dt_socket at address: 5005
+</code></pre><p>7 启动idea中的远程调试，即可跟踪到spark源码sparksubmit.scala代码中</p>
+<p>这种方式调试跟踪无法在spark app的代码上跟踪进去！！</p>
+<h3 id="spark应用的driver调试"><a href="#Spark应用的Driver调试" class="headerlink" title="Spark应用的Driver调试"></a>Spark应用的Driver调试</h3><p>调试跟踪spark app的源代码在driver上运行的情况，无须单独设置jvm参数</p>
+<p>1 提交spark-submit时添加如下参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">--driver-java-options -agentlib:jdwp=transport=dt_socket,server=y,<span class="built_in">suspend</span>=y,address=5005</div></pre></td></tr></table></figure>
+<p>address端口可以设定为其他值，如果5005端口被占用了的话。</p>
+<p>2 启动idea的调试<br>在webui地址master:8080查看driver的机器，设置remote debug的机器及端口，debug选择attach方式。即可跟踪spark app的代码在driver上运行的那一部分。</p>
+<h3 id="spark应用的excutor调试"><a href="#Spark应用的Excutor调试" class="headerlink" title="Spark应用的Excutor调试"></a>Spark应用的Excutor调试</h3><p>调试跟踪spark app的源代码在excutor上运行的情况（此种方式，还未成功跟踪进去！！！）</p>
+<p>1 提交spark-submit时添加如下参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">--num-executors 1 --executor-cores 1 --conf <span class="string">"spark.executor.extraJavaOptions=-agentlib:jdwp=transport=dt_socket,server=n,address=master:5006,suspend=n"</span></div></pre></td></tr></table></figure>
+<p>2 启动idea的调试</p>
+<p>由于submit中excutor的debug方式是非suspend的，所以idea的调试可以先于spark-submit启动，由于不一定excutor在那个机器，可以每个机器都设置一个，remote debug方式选择listen。</p>
+<p>Replace the address with your local computer’s address. (It’s a good idea to test that you can access it from your spark cluster).</p>
+<p>In this case, start your debugger in listening mode, then start your spark program and wait for the executor to attach to your debugger. It’s important to set the number of executors to 1 or multiple executors will all try to connect to your debugger, likely causing problems.</p>
+<p>These examples are for running with sparkMaster set as yarn-client although they may also work when running under mesos. If you’re running using yarn-cluster mode you may have to set the driver to attach to your debugger rather than attaching your debugger to the driver, since you won’t necessarily know in advance what node the driver will be executing on.</p>
+<p>参见<a href="http://stackoverflow.com/questions/29090745/debugging-spark-applications" target="_blank" rel="external">网站</a></p>
 
       
     </div>
@@ -399,6 +455,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/12/Ubuntu14-04下GAMIT10-6的安装/" rel="prev" title="Ubuntu14.04下GAMIT10.6的安装">
+                Ubuntu14.04下GAMIT10.6的安装 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -468,7 +528,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -477,7 +537,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
@@ -486,7 +546,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">Tags</span>
               </a>
             </div>
@@ -521,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spark应用程序调试方法"><span class="nav-number">1.</span> <span class="nav-text">Spark应用程序调试方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#spark调试问题"><span class="nav-number">2.</span> <span class="nav-text">Spark调试问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#远程调试方法"><span class="nav-number">2.1.</span> <span class="nav-text">远程调试方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#spark应用程序调试方法"><span class="nav-number">1.</span> <span class="nav-text">Spark应用程序调试方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#spark调试问题"><span class="nav-number">2.</span> <span class="nav-text">Spark调试问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#远程调试方法"><span class="nav-number">2.1.</span> <span class="nav-text">远程调试方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spark源代码的跟踪调试"><span class="nav-number">2.1.1.</span> <span class="nav-text">Spark源代码的跟踪调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark应用的driver调试"><span class="nav-number">2.1.2.</span> <span class="nav-text">Spark应用的Driver调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spark应用的excutor调试"><span class="nav-number">2.1.3.</span> <span class="nav-text">Spark应用的Excutor调试</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

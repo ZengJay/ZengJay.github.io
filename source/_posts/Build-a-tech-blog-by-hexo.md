@@ -138,46 +138,47 @@ More info: [Server](https://hexo.io/docs/server.html)
 + 在hexo-blog目录下构建git的master分支与hexo分支。master分支用来管理博客网页；hexo分支用来管理hexo的源码。
 + 构建git的master分支
 
-``` bash
-    echo "# zengjay.github.io" >> README.md
-    git init
-    git add README.md
-    git commit -m "first commit"
-    git remote add origin https://github.com/ZengJay/zengjay.github.io.git
-    git push -u origin master
-```
+	``` bash
+		echo "# zengjay.github.io" >> README.md
+		git init
+		git add README.md
+		git commit -m "first commit"
+		git remote add origin https://github.com/ZengJay/zengjay.github.io.git
+		git push -u origin master
+	```
 
 + 构建git的hexo分支
 
-``` bash   
-    git checkout -b hexo //创建并切换到hexo分支
-    git add .
-    git commit -m "hexo initial commit"
-    git push -u origin hexo
-```
+	``` bash   
+		git checkout -b hexo //创建并切换到hexo分支
+		git add .
+		git commit -m "hexo initial commit"
+		git push -u origin hexo
+	```
 
-+ hexo部署
++ 生成静态文件并部署到master分支
 
-``` bash
-    hexo d
-```
+	``` bash
+		hexo g
+		hexo d
+	```
 
 + 更新hexo源码后，提交到github
 
-```bash
-   git add .
-   git commit -m "更新内容"
-   git push -u origin hexo
-```
+	```bash
+	   git add .
+	   git commit -m "更新内容"
+	   git push -u origin hexo
+	```
 
 
-+ 新机器的hexo源码部署
++ 另一新机器的hexo源码部署
 
 首先，将hexo源码clone到新机器某目录下
 
-```bash
-	git clone -b hexo https://github.com/username/username.git [新机器hexo源码目录]
-```
+	```bash
+		git clone -b hexo https://github.com/username/username.git [新机器hexo源码目录]
+	```
 
 然后，在source目录下更改博客内容md文件。
 
@@ -217,10 +218,10 @@ More info: [Server](https://hexo.io/docs/server.html)
 
 出现如下问题
 
-```bash
-	Warning: Permanently added "github.com,*.*.*.*"(RSA) to the list of known hosts.
-	Permission denied(public key). 
-```
+	```bash
+		Warning: Permanently added "github.com,*.*.*.*"(RSA) to the list of known hosts.
+		Permission denied(public key). 
+	```
 原因：
 
 安装了github for windows，其ssh配置文件中认证文件为~\.ssh\github_rsa，ssh-keygen生成的不是此文件，因此，可以重装github，并把github_rsa文件的密匙添加到github网站个人信息中即可。
