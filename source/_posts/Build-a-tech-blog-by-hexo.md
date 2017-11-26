@@ -182,17 +182,19 @@ More info: [Server](https://hexo.io/docs/server.html)
 
 然后，在source目录下更改博客内容md文件。
 
-完成后可以用hexo g生成博客网页，hexo d部署博客网页。并通过下面git操作将博客源码文件（分支hexo）提交到github。
+完成后可以用hexo g生成博客网页，hexo d部署博客网页。
 
+并通过下面git操作将博客源码文件（分支hexo）提交到github。
+	```bash
     // 添加源文件
-    git add .
-    // git提交
-    git commit -m ""
-    // 先拉原来Github分支上的源文件到本地，进行合并
-    git pull origin hexo
-    // 比较解决前后版本冲突后，push源文件到Github的分支
-    git push origin hexo
-
+		git add .
+		// git提交
+		git commit -m ""
+		// 先拉原来Github分支上的源文件到本地，进行合并
+		git pull origin hexo
+		// 比较解决前后版本冲突后，push源文件到Github的分支
+		git push origin hexo
+	```
 1. 新机器上变更md文件，最好只将md文件提交到github
 2. 新机器上最好只hexo g与hexo s，不要运行hexo d，hexo d将生成的博客站点文件git推到github的博客站点的master分支上去了。
 3. hexo d 只由最原始的机器上布设？？
