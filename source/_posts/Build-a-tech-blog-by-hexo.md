@@ -197,7 +197,16 @@ More info: [Server](https://hexo.io/docs/server.html)
 2. 新机器上最好只hexo g与hexo s，不要运行hexo d，hexo d将生成的博客站点文件git推到github的博客站点的master分支上去了。
 3. hexo d 只由最原始的机器上布设？？
 
+新机器部署hexo源码提交时，github上需要提交本机器的密匙。
+1. windows下进入User/Adminstrator/.ssh目录（linux则是在~/.ssh下），如果该目录下有id_rsa.pub，有密匙无需重新建立，没有则运行如下命令建立密匙
 
+	```bash
+	$ ssh-keygen -t rsa -C "your@email.com"
+	```
+2. 登陆github保存hexo源码的用户，账户的设置中，为本机添加SSH key
+3. 将ssh-rsa.pub中的内容copy到github账户设置中的SSH key中去
+
+	
 参考[here](https://sawyersun.github.io/2017/01/20/Using-git-branch-manage-hexo-blog/)，[here](http://www.jianshu.com/p/6fb0b287f950)
 
 
@@ -225,6 +234,7 @@ More info: [Server](https://hexo.io/docs/server.html)
 原因：
 
 安装了github for windows，其ssh配置文件中认证文件为~\.ssh\github_rsa，ssh-keygen生成的不是此文件，因此，可以重装github，并把github_rsa文件的密匙添加到github网站个人信息中即可。
+解决方法：
 
 详细请参考[网站](http://www.cnblogs.com/zjrodger/p/3952692.html)
 
