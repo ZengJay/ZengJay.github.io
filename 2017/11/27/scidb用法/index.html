@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="scidb," />
 
 
 
@@ -84,13 +84,28 @@
 
 
 
+<meta name="description" content="scidb安装操作系统采用OSGeoLive 10.5
+通过docker来安装安装docker CE 版https://www.docker.com/get-docker
+直接在ubuntu下安装scidb 远程client访问scidb的主机地址为172.17.0.2 端口为8080
+scidbconnect(host = 172.17.0.2, port =8080)
+带gdal的scidb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="scidb用法">
 <meta property="og:url" content="http://yoursite.com/2017/11/27/scidb用法/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:updated_time" content="2017-11-26T16:04:48.019Z">
+<meta property="og:description" content="scidb安装操作系统采用OSGeoLive 10.5
+通过docker来安装安装docker CE 版https://www.docker.com/get-docker
+直接在ubuntu下安装scidb 远程client访问scidb的主机地址为172.17.0.2 端口为8080
+scidbconnect(host = 172.17.0.2, port =8080)
+带gdal的scidb">
+<meta property="og:updated_time" content="2017-11-29T12:26:34.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scidb用法">
+<meta name="twitter:description" content="scidb安装操作系统采用OSGeoLive 10.5
+通过docker来安装安装docker CE 版https://www.docker.com/get-docker
+直接在ubuntu下安装scidb 远程client访问scidb的主机地址为172.17.0.2 端口为8080
+scidbconnect(host = 172.17.0.2, port =8080)
+带gdal的scidb">
 
 
 
@@ -307,6 +322,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大数据计算/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据计算</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -332,7 +369,13 @@
       
 
       
-        
+        <h3 id="scidb安装"><a href="#scidb安装" class="headerlink" title="scidb安装"></a>scidb安装</h3><h4 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h4><p>采用OSGeoLive 10.5</p>
+<h4 id="通过docker来安装"><a href="#通过docker来安装" class="headerlink" title="通过docker来安装"></a>通过docker来安装</h4><p>安装docker CE 版<br><a href="https://www.docker.com/get-docker" target="_blank" rel="external">https://www.docker.com/get-docker</a></p>
+<h4 id="直接在ubuntu下安装"><a href="#直接在ubuntu下安装" class="headerlink" title="直接在ubuntu下安装"></a>直接在ubuntu下安装</h4><h3 id="scidb-远程client访问"><a href="#scidb-远程client访问" class="headerlink" title="scidb 远程client访问"></a>scidb 远程client访问</h3><p>scidb的主机地址为172.17.0.2 端口为8080</p>
+<p>scidbconnect(host = 172.17.0.2, port =8080)</p>
+<p>带gdal的scidb driver在client端远程操作</p>
+<pre><code><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gdal_translate(src_dataset = datasets[<span class="number">1</span>],</div><div class="line">			   dst_dataset = <span class="string">"SCIDB:array=MOD13A3 host=172.17.0.2 port=8080"</span>, of = <span class="string">"SciDB"</span>, a_srs = wkt,</div><div class="line">			   co = list(<span class="string">"t=2000-01"</span>, <span class="string">"dt=P1M"</span>, <span class="string">"type=STS"</span>))</div></pre></td></tr></table></figure>
+</code></pre>
       
     </div>
 
@@ -352,6 +395,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/scidb/" rel="tag"># scidb</a>
+          
+        </div>
       
 
       
@@ -413,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -445,7 +503,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">Tags</span>
               </a>
             </div>
@@ -470,6 +528,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#scidb安装"><span class="nav-number">1.</span> <span class="nav-text">scidb安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#操作系统"><span class="nav-number">1.1.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过docker来安装"><span class="nav-number">1.2.</span> <span class="nav-text">通过docker来安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#直接在ubuntu下安装"><span class="nav-number">1.3.</span> <span class="nav-text">直接在ubuntu下安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scidb-远程client访问"><span class="nav-number">2.</span> <span class="nav-text">scidb 远程client访问</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
