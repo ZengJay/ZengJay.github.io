@@ -100,7 +100,7 @@ scale up
 
 How do I install scidb?操作系统
 安装OSGeolive 10.51.虚拟机只有虚拟硬盘，将名字改为osgeo-live-10.5去掉“-vm”。2.在vm中建立新虚拟机，新建虚拟机的所在目录与OSGeolive的官网虚拟机虚拟硬盘所在目录在一个目录即可。新建虚拟机名字为“osg">
-<meta property="og:updated_time" content="2017-12-17T01:59:51.530Z">
+<meta property="og:updated_time" content="2017-12-17T03:30:10.630Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scidb用法">
 <meta name="twitter:description" content="What is scidb?
@@ -202,7 +202,7 @@ How do I install scidb?操作系统
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Accueil
+            Startseite
           </a>
         </li>
       
@@ -212,7 +212,7 @@ How do I install scidb?操作系统
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -222,7 +222,7 @@ How do I install scidb?操作系统
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -312,7 +312,7 @@ How do I install scidb?操作系统
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-27T00:04:47+08:00">
                 2017-11-27
@@ -333,7 +333,7 @@ How do I install scidb?操作系统
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -389,12 +389,14 @@ How do I install scidb?操作系统
 <p>  或者 安装docker CE 版</p>
 <p>  <a href="https://www.docker.com/get-docker" target="_blank" rel="external">https://www.docker.com/get-docker</a></p>
 <ul>
-<li>安装scidb-eo</li>
+<li><p>安装scidb-eo</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/appelmar/sicdb-eo &amp;&amp; scidb-eo/16.9</div><div class="line">sudo docker build -tag=<span class="string">"scidb-eo-16.9"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>从host机器登陆scidb-eo容器（instance）</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -p 33330 scidb@localhost</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<ul>
-<li>从host机器登陆scidb-eo容器（instance）</li>
-</ul>
-<p>ssh -p 33330 scidb@localhost<br>密码 xxxx.xxxx.xxxx</p>
+<p>密码 xxxx.xxxx.xxxx</p>
 <ul>
 <li><p>安装R 3.3</p>
 <p>ubuntu 14.04 自带R是3.02版本，而rgdal需要3.3以上版本</p>
@@ -408,7 +410,7 @@ How do I install scidb?操作系统
 </li>
 <li><p>容器docker中安装scidb</p>
 </li>
-<li><p>host 主机</p>
+<li><p>host 主机 </p>
 </li>
 </ul>
 <h3 id="scidb-远程-client访问"><a href="#scidb-远程-client访问" class="headerlink" title="scidb 远程 client访问"></a>scidb 远程 client访问</h3><p>scidb的主机地址为172.17.0.2 端口为8080</p>
@@ -504,10 +506,10 @@ How do I install scidb?操作系统
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Des Matières
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Ensemble
+            Übersicht
           </li>
         </ul>
       
@@ -526,7 +528,7 @@ How do I install scidb?操作系统
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">11</span>
-                <span class="site-state-item-name">articles</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -535,7 +537,7 @@ How do I install scidb?操作系统
             <div class="site-state-item site-state-categories">
               <a href="/categories">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">categories</span>
+                <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
           
@@ -544,7 +546,7 @@ How do I install scidb?操作系统
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
@@ -608,11 +610,11 @@ How do I install scidb?操作系统
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Thème -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
