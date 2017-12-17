@@ -84,7 +84,7 @@
 
 
 
-<meta name="description" content="Docker####在宿主机上启动docker服务
+<meta name="description" content="Docker####在宿主机上启动docker服务 ####
 
 docker 服务启动
   1sudo service docker start
@@ -93,12 +93,14 @@ docker 状态察看
   1sudo service docker status
 
 
-####启动容器">
+####改变docker0的ip及映射的ip范围
+
+采用configure_docker0.sh脚本实现doker0桥接ip及容器ip范围的重新设定，默认是172.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker用法及常用命令">
 <meta property="og:url" content="http://yoursite.com/2017/12/17/docker用法及常用命令/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:description" content="Docker####在宿主机上启动docker服务
+<meta property="og:description" content="Docker####在宿主机上启动docker服务 ####
 
 docker 服务启动
   1sudo service docker start
@@ -107,11 +109,13 @@ docker 状态察看
   1sudo service docker status
 
 
-####启动容器">
-<meta property="og:updated_time" content="2017-12-17T08:12:16.897Z">
+####改变docker0的ip及映射的ip范围
+
+采用configure_docker0.sh脚本实现doker0桥接ip及容器ip范围的重新设定，默认是172.">
+<meta property="og:updated_time" content="2017-12-17T15:00:41.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker用法及常用命令">
-<meta name="twitter:description" content="Docker####在宿主机上启动docker服务
+<meta name="twitter:description" content="Docker####在宿主机上启动docker服务 ####
 
 docker 服务启动
   1sudo service docker start
@@ -120,7 +124,9 @@ docker 状态察看
   1sudo service docker status
 
 
-####启动容器">
+####改变docker0的ip及映射的ip范围
+
+采用configure_docker0.sh脚本实现doker0桥接ip及容器ip范围的重新设定，默认是172.">
 
 
 
@@ -384,7 +390,7 @@ docker 状态察看
       
 
       
-        <h3 id="docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><p>####在宿主机上启动docker服务</p>
+        <h3 id="docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><p>####在宿主机上启动docker服务 ####</p>
 <ul>
 <li><p>docker 服务启动</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service docker start</div></pre></td></tr></table></figure>
@@ -392,6 +398,13 @@ docker 状态察看
 <li><p>docker 状态察看</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service docker status</div></pre></td></tr></table></figure>
 </li>
+</ul>
+<p>####改变docker0的ip及映射的ip范围</p>
+<ul>
+<li>采用configure_docker0.sh脚本实现doker0桥接ip及容器ip范围的重新设定，默认是172.17.0.1 </li>
+<li>可以将容器的ip地址设置到与host虚拟机器同一个段内（比如，192.168.1.x）</li>
+<li>host虚拟机器采用桥接方式使得虚拟host机器的ip与虚拟机的host机器的物理局域网在同一个ip段（比如，192.168.1.x）</li>
+<li>注意docker0的ip及桥接容器的ip范围与host虚拟机及虚拟机的host机器的ip地址不冲突</li>
 </ul>
 <p>####启动容器</p>
 
