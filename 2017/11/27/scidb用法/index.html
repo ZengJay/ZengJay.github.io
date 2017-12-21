@@ -116,7 +116,7 @@ host 主机
 
 How do I install scidb?操作系统
 安装OSGeolive 10.51.虚拟机只有虚拟硬盘，将名字改为osgeo-live-10.5去掉“-vm”。2.在v">
-<meta property="og:updated_time" content="2017-12-19T03:20:18.898Z">
+<meta property="og:updated_time" content="2017-12-21T08:06:14.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scidb用法">
 <meta name="twitter:description" content="What is scidb?
@@ -422,7 +422,7 @@ How do I install scidb?操作系统
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/appelmar/sicdb-eo &amp;&amp; scidb-eo/16.9</div><div class="line">sudo docker build -tag=<span class="string">"scidb-eo:16.9"</span> . <span class="comment"># don't miss the dot</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>启动容器</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo docker run <span class="_">-d</span> -it --name=<span class="string">"scidb-1609-0"</span> --cpuset-cpus=<span class="string">"0"</span> -m <span class="string">"4G"</span> -h <span class="string">"scidb-eo-1609"</span> -p 33330:22 -p 33331:8083 -p 33332:8787 scidb-eo:16.9</div></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo docker run <span class="_">-d</span> -it --name=<span class="string">"scidb-1609-0"</span> --cpuset-cpus=<span class="string">"0,1"</span> -m <span class="string">"4G"</span> -h <span class="string">"scidb-eo-1609"</span> -p 33330:22 -p 33331:8083 -p 33332:8787 -v /home/scidb/Downloads:/home/scidb/Downloads scidb-eo:16.9</div></pre></td></tr></table></figure>
 </li>
 <li><p>从host机器登陆scidb-eo容器（instance）</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -p 33330 scidb@localhost</div></pre></td></tr></table></figure>
@@ -438,7 +438,8 @@ How do I install scidb?操作系统
 <li><p>shim 是否正常工作？</p>
 <p>1.在scidb的容器的host机器上浏览器输入，容器ip:8083(192.168.1.17:8083)，用户：scidb 密码：xxxx.xxxx.xxxx</p>
 <p>2.shim的配置文件为/var/lib/shim/conf  （wur的docker镜像采用15.12时需要port设为8080，用户名改为scidb才能正常访问）</p>
-<p>3.shim正常工作了，R等才能通过shim从客户端（非scidb所在容器机器）上访问操作scidb</p>
+<p>3.shim的/var/lib/shim/目录下有公匙文件ssl_cert.pem</p>
+<p>4.shim正常工作了，R等才能通过shim从客户端（非scidb所在容器机器）上访问操作scidb</p>
 </li>
 </ul>
 <p>###如何容器中配置scidb？</p>
