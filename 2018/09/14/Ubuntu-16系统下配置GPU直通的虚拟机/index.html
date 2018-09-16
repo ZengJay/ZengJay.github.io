@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="虚拟机," />
 
 
 
@@ -84,19 +84,25 @@
 
 
 
-<meta name="description" content="##基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
-##Ubuntu 16中的显卡">
+<meta name="description" content="基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
+KVM作为虚拟机(hypervisor)
+虚拟机器的操作系统为ubuntu及Windows均可以获得直通后host机器的GPU显卡。
+Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD Radeon 455">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 16系统下配置GPU直通的虚拟机">
 <meta property="og:url" content="http://yoursite.com/2018/09/14/Ubuntu-16系统下配置GPU直通的虚拟机/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:description" content="##基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
-##Ubuntu 16中的显卡">
-<meta property="og:updated_time" content="2018-09-14T06:37:43.810Z">
+<meta property="og:description" content="基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
+KVM作为虚拟机(hypervisor)
+虚拟机器的操作系统为ubuntu及Windows均可以获得直通后host机器的GPU显卡。
+Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD Radeon 455">
+<meta property="og:updated_time" content="2018-09-16T01:04:05.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 16系统下配置GPU直通的虚拟机">
-<meta name="twitter:description" content="##基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
-##Ubuntu 16中的显卡">
+<meta name="twitter:description" content="基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
+KVM作为虚拟机(hypervisor)
+虚拟机器的操作系统为ubuntu及Windows均可以获得直通后host机器的GPU显卡。
+Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD Radeon 455">
 
 
 
@@ -190,7 +196,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -200,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -210,7 +216,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -300,7 +306,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-14T14:33:22+08:00">
                 2018-09-14
@@ -338,8 +344,12 @@
       
 
       
-        <p>##基本配置<br>host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3</p>
-<p>##Ubuntu 16中的显卡</p>
+        <h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3</p>
+<p>KVM作为虚拟机(hypervisor)</p>
+<p>虚拟机器的操作系统为ubuntu及Windows均可以获得直通后host机器的GPU显卡。</p>
+<h2 id="ubuntu-16中的显卡"><a href="#Ubuntu-16中的显卡" class="headerlink" title="Ubuntu 16中的显卡"></a>Ubuntu 16中的显卡</h2><p>两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)<br>一个AMD Radeon HD Radeon 4550/4350 (用于host机器显示器接通,作为界面终端交互使用)</p>
+<h3 id="显卡设置"><a href="#显卡设置" class="headerlink" title="显卡设置"></a>显卡设置</h3><p> 必须在bios设置中将Radeon显卡,用来终端显示的显卡所在的pci插槽设置为主显示VGA或GPU,将该显卡接显示器</p>
+<h2 id="宿主host机器中ubuntu-16的设置及相关安装"><a href="#宿主-host-机器中-Ubuntu-16的设置及相关安装" class="headerlink" title="宿主(host)机器中,Ubuntu 16的设置及相关安装"></a>宿主(host)机器中,Ubuntu 16的设置及相关安装</h2><h2 id="虚拟机配置"><a href="#虚拟机配置" class="headerlink" title="虚拟机配置"></a>虚拟机配置</h2><p>参考<a href="https://medium.com/@calerogers/gpu-virtualization-with-kvm-qemu-63ca98a6a172" target="_blank" rel="external">站点</a></p>
 
       
     </div>
@@ -361,6 +371,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/虚拟机/" rel="tag"># 虚拟机</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -375,6 +391,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/15/GNSS-R-的仿真软件wavpy介绍及基本配置/" rel="prev" title="GNSS-R 的仿真软件wavpy介绍及基本配置">
+                GNSS-R 的仿真软件wavpy介绍及基本配置 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -421,8 +441,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -435,8 +464,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -445,7 +474,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories">
                 <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">categories</span>
+                <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
           
@@ -453,8 +482,8 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
@@ -479,6 +508,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本配置"><span class="nav-number">1.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu-16中的显卡"><span class="nav-number">2.</span> <span class="nav-text">Ubuntu 16中的显卡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#显卡设置"><span class="nav-number">2.1.</span> <span class="nav-text">显卡设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宿主host机器中ubuntu-16的设置及相关安装"><span class="nav-number">3.</span> <span class="nav-text">宿主(host)机器中,Ubuntu 16的设置及相关安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#虚拟机配置"><span class="nav-number">4.</span> <span class="nav-text">虚拟机配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -502,7 +547,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
