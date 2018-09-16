@@ -84,25 +84,28 @@
 
 
 
-<meta name="description" content="基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
+<meta name="description" content="参考站点1，站点2
+基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
 KVM作为虚拟机(hypervisor)
 虚拟机器的操作系统为ubuntu及Windows均可以获得直通后host机器的GPU显卡。
-Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD Radeon 455">
+Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 16系统下配置GPU直通的虚拟机">
 <meta property="og:url" content="http://yoursite.com/2018/09/14/Ubuntu-16系统下配置GPU直通的虚拟机/index.html">
 <meta property="og:site_name" content="Jay's Tech Blog">
-<meta property="og:description" content="基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
+<meta property="og:description" content="参考站点1，站点2
+基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
 KVM作为虚拟机(hypervisor)
 虚拟机器的操作系统为ubuntu及Windows均可以获得直通后host机器的GPU显卡。
-Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD Radeon 455">
-<meta property="og:updated_time" content="2018-09-16T01:04:05.629Z">
+Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD">
+<meta property="og:updated_time" content="2018-09-16T01:26:24.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 16系统下配置GPU直通的虚拟机">
-<meta name="twitter:description" content="基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
+<meta name="twitter:description" content="参考站点1，站点2
+基本配置host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3
 KVM作为虚拟机(hypervisor)
 虚拟机器的操作系统为ubuntu及Windows均可以获得直通后host机器的GPU显卡。
-Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD Radeon 455">
+Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)一个AMD Radeon HD">
 
 
 
@@ -196,7 +199,7 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -206,7 +209,7 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Kategorien
+            Categories
           </a>
         </li>
       
@@ -216,7 +219,7 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -306,7 +309,7 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-14T14:33:22+08:00">
                 2018-09-14
@@ -344,13 +347,14 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
       
 
       
-        <h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3</p>
+        <p>参考<a href="https://medium.com/@calerogers/gpu-virtualization-with-kvm-qemu-63ca98a6a172" target="_blank" rel="external">站点1</a>，<a href="https://blog.csdn.net/u012336567/article/details/74743168" target="_blank" rel="external">站点2</a></p>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>host机器Dell 7910服务器,host机器上安装Ubuntu 16.04.3</p>
 <p>KVM作为虚拟机(hypervisor)</p>
 <p>虚拟机器的操作系统为ubuntu及Windows均可以获得直通后host机器的GPU显卡。</p>
 <h2 id="ubuntu-16中的显卡"><a href="#Ubuntu-16中的显卡" class="headerlink" title="Ubuntu 16中的显卡"></a>Ubuntu 16中的显卡</h2><p>两个Geforce gtx 980显卡 (用于直通的显卡,在虚拟机可以使用作为高性能计算使用)<br>一个AMD Radeon HD Radeon 4550/4350 (用于host机器显示器接通,作为界面终端交互使用)</p>
 <h3 id="显卡设置"><a href="#显卡设置" class="headerlink" title="显卡设置"></a>显卡设置</h3><p> 必须在bios设置中将Radeon显卡,用来终端显示的显卡所在的pci插槽设置为主显示VGA或GPU,将该显卡接显示器</p>
-<h2 id="宿主host机器中ubuntu-16的设置及相关安装"><a href="#宿主-host-机器中-Ubuntu-16的设置及相关安装" class="headerlink" title="宿主(host)机器中,Ubuntu 16的设置及相关安装"></a>宿主(host)机器中,Ubuntu 16的设置及相关安装</h2><h2 id="虚拟机配置"><a href="#虚拟机配置" class="headerlink" title="虚拟机配置"></a>虚拟机配置</h2><p>参考<a href="https://medium.com/@calerogers/gpu-virtualization-with-kvm-qemu-63ca98a6a172" target="_blank" rel="external">站点</a></p>
-
+<h2 id="宿主host机器中ubuntu-16的设置及相关安装"><a href="#宿主-host-机器中-Ubuntu-16的设置及相关安装" class="headerlink" title="宿主(host)机器中,Ubuntu 16的设置及相关安装"></a>宿主(host)机器中,Ubuntu 16的设置及相关安装</h2><p><strong>禁用nouveau驱动</strong><br>ubuntu 自带nvidia的显卡驱动仍会将nvidia显卡加载上来，而无法将其映射到vfio-pci加载，所以应该将nouveau禁用，使gpu被映射到vfio-pci上。</p>
+<h2 id="虚拟机配置"><a href="#虚拟机配置" class="headerlink" title="虚拟机配置"></a>虚拟机配置</h2>
       
     </div>
 
@@ -443,10 +447,10 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table Des Matières
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Ensemble
           </li>
         </ul>
       
@@ -464,8 +468,8 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">15</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">articles</span>
               </a>
             </div>
           
@@ -474,7 +478,7 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
             <div class="site-state-item site-state-categories">
               <a href="/categories">
                 <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">categories</span>
               </a>
             </div>
           
@@ -483,7 +487,7 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               </a>
             </div>
           
@@ -547,11 +551,11 @@ Ubuntu 16中的显卡两个Geforce gtx 980显卡 (用于直通的显卡,在虚�
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Theme -
+  Thème -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
